@@ -1,0 +1,28 @@
+.row-bordered:after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.audit-tabs > li{
+    padding: 10px;
+    color: #ABABAB;
+    cursor: pointer;
+    border-bottom: 5px solid transparent;
+    text-decoration: none;
+}
+.audit-tabs {
+    margin: 0;
+    padding: 0 10px;
+}
+
+
+.audit-tabs li:hover {
+    color: #000;
+    border-bottom: 5px solid #35A0E3;
+    text-decoration: none;
+}
+.audit-tabs > .active {
+    color: #000;
+    border-bottom: 5px solid #35A0E3;
+}

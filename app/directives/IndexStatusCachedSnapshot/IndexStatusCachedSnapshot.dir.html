@@ -1,0 +1,72 @@
+<div class="row containerComponent">
+    <div class="content-header">
+        <h2>{{vm.model.name}}</h2>
+    </div>
+    <div class="content-error">
+        <div ng-if="vm.model.warning > 0" class="warning-block">
+            <img src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                 alt="Warning">
+            {{vm.model.warning}}
+        </div>
+        <div ng-if="vm.model.error > 0" class="error-block">
+            <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                 alt="Error">
+            {{vm.model.error}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <div class="component-title-container">
+        <div class="mr">
+            <div class="component-item">
+                <div class="component-title-container index-component-title-container">
+                    <h4 class="component-title">
+                        <img ng-if="vm.model.criterias[0].checked == 'passed'"
+                             src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                             alt="Check">
+                        <img ng-if="vm.model.criterias[0].checked == 'warning'"
+                             src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                             alt="Check">
+                        <img ng-if="vm.model.criterias[0].checked == 'error'"
+                             src="../../../../SEO-Audit/app/content/img/Error.svg"
+                             alt="Check">
+                        {{vm.model.criterias[0].name}}
+                    </h4>
+                    <div class="index-component-icon-details">
+                        <div class="component-icon-search-engine">
+                            <img ng-repeat="icon in vm.model.criterias[0].rationale" ng-src="{{icon.image}}" alt="{{icon.tooltip}}">
+
+                        </div>
+                        <div class="component-details">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#{{'IndexStatus' + vm.model.criterias[0].id}}" aria-expanded="false"
+                                    aria-controls="{{'IndexStatus' + vm.model.criterias[0].id}}">
+                                Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse" id="{{'IndexStatus' + vm.model.criterias[0].id}}">
+                <div class="well">
+                    {{vm.model.criterias[0].description}}
+                </div>
+            </div>
+            <h4>A sample of the page's snippet view in the SERPs (search engines results pages)</h4>
+            <div class="seBox">
+                <div class="bl" ng-repeat="se in vm.model.criterias[0].content">
+                    <div class="blContent">
+                        <p class="header-se" ng-bind-html="se.snapshot.title"></p>
+                        <p class="link-se" ng-bind-html="se.snapshot.url"></p>
+                        <p class="text-se" ng-bind-html="se.snapshot.description"></p>
+                    </div>
+                    <div class="blIcon">
+                        <img ng-src="{{se.image}}" alt="{{se.tooltip}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

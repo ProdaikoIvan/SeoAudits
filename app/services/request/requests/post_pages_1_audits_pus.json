@@ -1,0 +1,50 @@
+{
+  "id": 4,
+  "name": "Page's URL Structure",
+  "description": null,
+  "criterias": [
+    {
+      "id": 12,
+      "name": "URL length",
+      "rationale": "16 chars",
+      "description": "Search engines display 78 - 80 characters of a page URL after the page Title and its snippet. Using descriptive names for the webpages will not only allow you to organize structure of the website wisely but will allow easier and more correct scanning of your website, bringing better ranking. Google researches show that short URLs are enjoying twice as many clicks than the longer ones.",
+      "content": null,
+      "checked": "passed"
+    },
+    {
+      "id": 13,
+      "name": "Keyword is used in the URL",
+      "rationale": null,
+      "description": "One of the most prominent places to put a keyword in is the webpage's URL. Remember to use the keyword in the URL of every page you are planning to promote. URLs of the pages including the keywords relevant to the content of the pages are making navigation across the website easier. They are easy to remember and easier to link to. Remember that the URL will be visible in the SERP while the keywords mentioned in it will be highlighted",
+      "content": "http://<i>intent</i>.de",
+      "checked": "passed"
+    },
+    {
+      "id": 14,
+      "name": "Use a hyphen to separate words in the URL",
+      "rationale": null,
+      "description": "Search engines recommend using hyphens rather than underscores as the keywords separated by hyphens are \"seen\" as separate. Thus if your URL looks like \"buy_books\" then a search engine will show it for a search query \"buy_books\". A page with the URL \"buy-books\" may be considered as relevant for multiple search queries \"buy\", \"bookies\" or \"buy books.",
+      "content": "http://intent.de",
+      "checked": "passed"
+    },
+    {
+      "id": 15,
+      "name": "Do not use capital letters in the URL",
+      "rationale": null,
+      "description": "Despite the facts that URLs may contain either regular or capital letters it is advised not use the capital ones as they are harder to comprehend and remember by the user. If capital letters for some reason were used, you may fix the issue by making a 301 redirect to the user-friendly URL.",
+      "content": "http://intent.de",
+      "checked": "passed"
+    },
+    {
+      "id": 16,
+      "name": "Page duplicates not found",
+      "rationale": null,
+      "description": "Make sure that the same content is not used at different URLs (my-page.php, my-page.html, my-page.htm and so on) as search engines will index every page and will spot duplicate content. If you find out that users are linking to the same URL using its different versions do set the 301 redirect to the preferred page.",
+      "content": null,
+      "checked": "passed"
+    }
+  ],
+  "percent": 100,
+  "warning": 0,
+  "error": 0
+}

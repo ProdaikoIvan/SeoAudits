@@ -1,0 +1,109 @@
+<div class="container-initialIndicator">
+    <div class="header-initialIndicators">
+        <div class="row">
+            <h4><strong class="header-initial">Lending page SEO audit </strong>
+                <small>{{vm.model.created_at}}</small>
+            </h4>
+            <a href="{{vm.model.url}}" target="_blank">{{vm.model.url}}</a>
+        </div>
+
+        <div class="row">
+            <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                    <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Export
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Download PDF</a></li>
+                    <li><a href="#">Sent over e-mail</a></li>
+                </ul>
+            </div>
+
+            <button type="button" class="btn btn-success" ng-click="vm.reload()">Re-check
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4><strong>Keyword analyzed:</strong> <span class="keywords">{{vm.model.keyword}}</span></h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!--diagram-->
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body containerInitialIndicator">
+                <div class="OverallScope">
+                    <h3 class="header-OverallScope">Overall score</h3>
+                    <canvas id="doughnut" class="chart chart-doughnut"
+                            chart-data="vm.data" chart-labels="vm.labels" chart-colors="vm.colors">
+                    </canvas>
+                    <div class="info-helpers">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="title"><img src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                                                         alt="Checked"> Check passed</span>
+                                <span class="value">{{vm.model.success}}</span>
+                            </li>
+                            <li class="list-group-item"><span class="title"><img
+                                    src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                                    alt="Warning"> Warning</span>
+                                <span class="value">{{vm.model.warning}}</span>
+                            </li>
+                            <li class="list-group-item"><span class="title"><img
+                                    src="../../../../SEO-Audit/app/content/img/Error.svg" alt="Error"> Error</span>
+                                <span class="value">{{vm.model.error}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ScopeByCategories">
+                    <h3 class="header-ScopeByCategories">Scope by categories</h3>
+                    <canvas class="chart chart-horizontal-bar"
+                            chart-data="vm.dataCategories" chart-labels="vm.labelsCategories">
+                    </canvas>
+                </div>
+                <!--<div class="ListScopeByCategories">-->
+                <!--<h3 class="header-ScopeByCategories">List</h3>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body initialInformationContainer">
+                <div class="Total-container" ng-click="vm.total()" ng-class="vm.selectedCategory == vm.category[0] ? 'selectedCategory': ''">
+                    <span class="title"><img
+                            src="../../../../SEO-Audit/app/content/img/total.svg"
+                            alt="Warning"> Total</span>
+                    <span class="value">{{vm.model.total}}</span>
+                </div>
+                <div class="Checks-passed" ng-click="vm.checkPassed()" ng-class="vm.selectedCategory == vm.category[1] ? 'selectedCategory': ''">
+                    <span class="title"><img
+                            src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                            alt="Warning"> Checks passed</span>
+                    <span class="value">{{vm.model.success}}</span>
+                </div>
+                <div class="Warning" ng-click="vm.warning()" ng-class="vm.selectedCategory == vm.category[2] ? 'selectedCategory': ''">
+                    <span class="title"><img
+                        src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                        alt="Warning"> Warnings</span>
+                    <span class="value">{{vm.model.warning}}</span>
+                </div>
+                <div class="Errors"  ng-click="vm.error()" ng-class="vm.selectedCategory == vm.category[3] ? 'selectedCategory': ''">
+                    <span class="title">
+                        <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                        alt="Warning"> Errors</span>
+                    <span class="value">{{vm.model.error}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

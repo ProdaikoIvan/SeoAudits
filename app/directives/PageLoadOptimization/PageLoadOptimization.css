@@ -1,0 +1,6 @@
+.pageLoad-header{
+    display: flex;
+}
+.pageLoad-header button{
+    margin-left: 5px;
+}

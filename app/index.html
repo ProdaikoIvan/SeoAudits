@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SEO-audit</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="content/style/default.css">
+    <link rel="stylesheet" href="templates/resultAudit/resultAudit.template.css">
+    <link rel="stylesheet" href="directives/header/header.dir.css">
+    <link rel="stylesheet" href="directives/initialIndicators/initialIndicators.css">
+    <link rel="stylesheet" href="directives/IndexStatusCachedSnapshot/IndexStatusCachedSnapshot.css">
+    <link rel="stylesheet" href="directives/auditLoad/auditLoad.css">
+    <link rel="stylesheet" href="directives/imagesAnalysis/imageAnalysis.css">
+    <link rel="stylesheet" href="directives/ContentAnalysis/ContentAnalysis.css">
+    <link rel="stylesheet" href="directives/PageLoadOptimization/PageLoadOptimization.css">
+</head>
+<body>
+<ui-view></ui-view>
+
+<!--libs-->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="libs/chart.js/dist/Chart.min.js"></script>
+<script src="libs/angular-chart.js/dist/angular-chart.min.js"></script>
+<script src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+
+<!--app-->
+<script src="app.js"></script>
+<script src="app.config.js"></script>
+
+<!--templates-->
+<script src="templates/resultAudit/resultAudit.template.Ctrl.js"></script>
+<script src="templates/createAudit/createAudit.template.Ctrl.js"></script>
+
+<!--directives-->
+<script src="directives/header/header.dir.js"></script>
+<script src="directives/header/header.dir.ctrl.js"></script>
+<script src="directives/initialIndicators/initialIndicators.dir.js"></script>
+<script src="directives/initialIndicators/initialIndicators.dir.Ctrl.js"></script>
+<script src="directives/MajorDomainCharacteristics/MajorDomainCharacteristics.dir.js"></script>
+<script src="directives/MajorDomainCharacteristics/MajorDomainCharacteristics.dir.Ctrl.js"></script>
+<script src="directives/PagesTitle/PagesTitle.dir.js"></script>
+<script src="directives/PagesTitle/PagesTitle.dir.Ctrl.js"></script>
+<script src="directives/MetaDescription/MetaDescription.dir.js"></script>
+<script src="directives/MetaDescription/MetaDescription.dir.Ctrl.js"></script>
+<script src="directives/PageURLStructure/PageURLStructure.dir.js"></script>
+<script src="directives/PageURLStructure/PageURLStructure.dir.Ctrl.js"></script>
+<script src="directives/IndexStatusCachedSnapshot/IndexStatusCachedSnapshot.dir.js"></script>
+<script src="directives/IndexStatusCachedSnapshot/IndexStatusCachedSnapshot.dir.Ctrl.js"></script>
+<script src="directives/imagesAnalysis/imageAnalysis.dir.js"></script>
+<script src="directives/imagesAnalysis/imageAnalysis.dir.Ctrl.js"></script>
+<script src="directives/ContentAnalysis/ContentAnalysis.dir.js"></script>
+<script src="directives/ContentAnalysis/ContentAnalysis.dir.Ctrl.js"></script>
+
+<script src="directives/LinksAnalysis/LinksAnalysis.dir.js"></script>
+<script src="directives/LinksAnalysis/LinksAnalysis.dir.Ctrl.js"></script>
+
+<script src="directives/PageLoadOptimization/PageLoadOptimization.dir.js"></script>
+<script src="directives/PageLoadOptimization/PageLoadOptimization.dir.Ctrl.js"></script>
+<script src="directives/PopularitySocialMedia/PopularitySocialMedia.dir.js"></script>
+<script src="directives/PopularitySocialMedia/PopularitySocialMedia.dir.Ctrl.js"></script>
+<script src="directives/UsabilityTechnicalAnalysis/UsabilityTechnicalAnalysis.dir.js"></script>
+<script src="directives/UsabilityTechnicalAnalysis/UsabilityTechnicalAnalysis.dir.Ctrl.js"></script>
+
+<script src="directives/auditLoad/auditLoad.dir.js"></script>
+<script src="directives/auditLoad/auditLoad.dir.Ctrl.js"></script>
+
+<!--services-->
+<script src="services/request/url.js"></script>
+<script src="services/request/request.js"></script>
+<script src="services/request/dataLoading.js"></script>
+<script src="services/auditType.js"></script>
+<script src="services/auditData.js"></script>
+<script src="services/categoriesAudit.js"></script>
+</body>
+</html>

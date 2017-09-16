@@ -1,0 +1,50 @@
+{
+  "id": 11,
+  "name": "Load Speed",
+  "description": null,
+  "criterias": [
+    {
+      "id": 39,
+      "name": "Page load speed score",
+      "rationale": "72/100",
+      "description": "Speed score as estimated by Google. \n    Google will compare your website load speed with millions of other websites in \n    their database. The score ranges from 0 to 100. The higher the value the better. \n    If the page is anywhere over 85 you site loads really fast.",
+      "content": null,
+      "checked": "warning"
+    },
+    {
+      "id": 40,
+      "name": "Page load speed",
+      "rationale": "1453.322 Kb/sec",
+      "description": "It's recommended to increase the webpage's\n     load speed. Low load speed may decrease the number of users tolerant enough to wait\n      till the website is loaded completely.",
+      "content": null,
+      "checked": "warning"
+    },
+    {
+      "id": 41,
+      "name": "Page size",
+      "rationale": "2.87 MB",
+      "description": "It's recommended to reduce the website's\n     100% loaded size. People prefer websites that load quickly and so do search\n      engines counting it as a positive ranking factor.",
+      "content": null,
+      "checked": "warning"
+    },
+    {
+      "id": 42,
+      "name": "Page load time",
+      "rationale": "1.97 s",
+      "description": "It's recommended to reduce the page load\n     time. If the website is loading for too long it will have a negative impact on\n      the website's ranking.",
+      "content": null,
+      "checked": "warning"
+    },
+    {
+      "id": 43,
+      "name": "Downloaded files and page elements",
+      "rationale": null,
+      "description": "List of the loaded files and elements before the website is displayed.",
+      "content": "file;path;size",
+      "checked": ""
+    }
+  ],
+  "percent": 0,
+  "warning": 4,
+  "error": 4
+}

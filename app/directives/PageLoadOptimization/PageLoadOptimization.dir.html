@@ -1,0 +1,81 @@
+<div class="row containerComponent">
+    <div class="content-header pageLoad-header">
+        <h2>{{vm.model.name}}</h2>
+        <button class="btn btn-default" type="button" ng-click="vm.mobile()">
+            <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>
+            Mobile
+        </button>
+        <button class="btn btn-default" type="button" ng-click="vm.desktop()">
+            <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+            Desktop
+        </button>
+    </div>
+    <div ng-if="vm.model.warning > 0" class="content-error">
+        <div class="warning-block">
+            <img src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                 alt="Warning">
+            {{vm.model.warning}}
+        </div>
+        <div  ng-if="vm.model.error > 0" class="error-block">
+            <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                 alt="Error">
+            {{vm.model.error}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in vm.model.criterias">
+            <div class="component-item">
+                <div class="component-title-container">
+                    <h4 class="component-title">
+                        <img ng-if="item.checked == 'passed'"
+                             src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'warning'"
+                             src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'error'"
+                             src="../../../../SEO-Audit/app/content/img/Error.svg"
+                             alt="Check">
+                        {{item.name}}
+                    </h4>
+                    <!--<div class="component-TitleDescription">test</div>-->
+                    <div class="component-TitleLinks" ng-if="item.content">
+                        <button class="btn btn-success" type="button">
+                            <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                            Get the backlinks
+                        </button>
+                    </div>
+                </div>
+                <div class="component-content">
+                    <div class="component-information">
+                        <div class="component-text" ng-bind-html="item.rationale"></div>
+                        <!--<div class="component-description">test</div>-->
+                    </div>
+                    <div class="component-details-block">
+                        <button ng-if="item.description" class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#{{'PageLoad' + item.id}}" aria-expanded="false" aria-controls="{{'PageLoad' + item.id}}">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--ng-bind-html="item.description"-->
+            <div class="collapse" id="{{'PageLoad' + item.id}}">
+                <div class="well" ng-if="!vm.isString(item.description)">
+                    <p ng-bind-html="item.description[0].title"></p>
+                    <p ng-if="vm.isString(item.description[1].link)">{{item.description[1].link}}</p>
+                    <p ng-if="!vm.isString(item.description[1].link)" ng-repeat="linkRef in item.description[1].link track by $index">
+                        {{linkRef}}
+                    </p>
+                </div>
+                <div class="well" ng-if="vm.isString(item.description)" ng-bind-html="item.description">
+
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>

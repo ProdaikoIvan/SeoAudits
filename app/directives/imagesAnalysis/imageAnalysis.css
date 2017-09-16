@@ -1,0 +1,12 @@
+.imagesAnalysis-TitleDescription-info {
+    font-style: italic;
+    margin: 10px 0 5px 27px;
+}
+
+.imagesAnalysis-TitleDescription {
+    font-style: italic;
+    color: rgba(52, 67, 78, 0.7);
+}
+.imagesAnalysis-TitleDescription-table table img{
+    max-width: 50px;
+}

@@ -1,0 +1,12 @@
+<!--<div class="row">-->
+    <!--<ol class="breadcrumb breadcrumb-arrow">-->
+        <!--<li ng-repeat="item in vm.breadcrumbs"><a href="#">{{item.title}}</a></li>-->
+    <!--</ol>-->
+<!--</div>-->
+<div class="row row-bordered">
+    <ul class="list-inline audit-tabs">
+        <li ng-repeat="link in vm.links.data" ng-click="vm.goTo($index)" ng-class="{active: $index == vm.links.setting.selected}" class="list-inline-item">{{link.name}}</li>
+    </ul>
+</div>
+
+<!---->

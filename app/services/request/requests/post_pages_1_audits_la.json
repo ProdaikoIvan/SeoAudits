@@ -1,0 +1,153 @@
+{
+  "id": 10,
+  "name": "Links analysis",
+  "description": null,
+  "criterias": [
+    {
+      "id": 35,
+      "name": "Backlinks(for the website)",
+      "rationale": "126",
+      "description": "The number of the inbound backlinks\n     is one of the key SEO factors of any website. Having and adding quality\n      backlinks is a very important ranking factor. Meanwhile please notice \n      that search engines are paying attention not only to the quantity \n      but also to the quality of the backlinks. A backlink from a relevant \n      website with decent content will have a considerably better effect than \n      multiple links from irrelevant websites.",
+      "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks",
+      "checked": "passed"
+    },
+    {
+      "id": 36,
+      "name": "Backlinks(unique domains linking to the website)",
+      "rationale": "126",
+      "description": "The number of backlinks from unique domains \n    is a significant criterion of how popular and competitive your website is. \n    100 links from 100 domains is considerably better than 1000 links from one domain.",
+      "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks",
+      "checked": "passed"
+    },
+    {
+      "id": 37,
+      "name": "Outbound links",
+      "rationale": {
+        "title": "0 Links",
+        "DoFollow": 0,
+        "NoFollow": 0
+      },
+      "description": "Dofollow links do pass the SEO juice and only \n    need to link to the relevant resources, Nofollow links are not passing SEO juice \n    from your webpage. Remember, linking to non-existing pages or irrelevant pages may \n    have a negative effect on your website's rankings.",
+      "content": null,
+      "checked": "passed"
+    },
+    {
+      "id": 38,
+      "name": "Internal links",
+      "rationale": {
+        "title": "17 Links",
+        "DoFollow": 17,
+        "NoFollow": 0
+      },
+      "description": "When adding internal links to be available \n    at the page you promote it is important to pick up the ones that really matter. \n    High number of internal links may reduce the SEO value of the page itself. \n    It is important to balance the website's structure depth and how far inner pages are located from the front page.",
+      "content": [
+        {
+          "link": "https://intent.de",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/leistungen",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/ueber-uns",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/referenzen",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/neuigkeiten",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/anfrage",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/neuigkeiten/new-book-release-germany-the-handbook-for-foreign-companies-and-founders",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/neuigkeiten/neuer-internetauftritt-fuer-notar-kaertner",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/neuigkeiten/ds-entertainment-bekommt-ein-eigenes-ticket-system",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/neuigkeiten/neue-adresse-fuer-die-intent-gmbh",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/akquisition-akquise-stellenausschreibung",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/junior-texter-content-manager-mw",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/online-redakteur-stellenausschreibung",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "https://intent.de/web-development-stellenausschreibung",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "http://intent.de/impressum",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "http://intent.de/agb",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        },
+        {
+          "link": "http://intent.de/datenschutzerklaerung",
+          "code": 200,
+          "status": "follow",
+          "moz_pa": 37
+        }
+      ],
+      "checked": "passed"
+    }
+  ],
+  "percent": 100,
+  "warning": 0,
+  "error": 0
+}

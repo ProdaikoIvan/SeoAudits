@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "url": "http://intent.de",
+  "keyword": "intent",
+  "percent": 70,
+  "total": 80,
+  "success": 60,
+  "warning": 10,
+  "error": 10,
+  "created_at": "Sep-13 2017",
+  "audits": []
+}

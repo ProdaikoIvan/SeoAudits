@@ -1,0 +1,83 @@
+{
+  "id": 9,
+  "name": "Keyword density",
+  "description": null,
+  "criterias": [
+    {
+      "id": 31,
+      "name": "Words totally",
+      "rationale": "8",
+      "description": "",
+      "content": [
+        {
+          "name": "php",
+          "found": [
+            "The keyword is found in title",
+            "The keyword is found in meta-description"
+          ],
+          "repeats": 2,
+          "frequency": 0.04
+        },
+        {
+          "name": "solid",
+          "found": [
+            "The keyword is found in title",
+            "The keyword is found in meta-description"
+          ],
+          "repeats": 2,
+          "frequency": 0.04
+        }
+      ],
+      "checked": ""
+    },
+    {
+      "id": 32,
+      "name": "Phrases with 2 words",
+      "rationale": "1",
+      "description": "",
+      "content": [
+        {
+          "name": "clean code",
+          "found": [
+            "The keyword is found in title",
+            "The keyword is found in meta-description",
+            "The keyword is found in meta-description"
+          ],
+          "repeats": 3,
+          "frequency": 0.06
+        }
+      ],
+      "checked": ""
+    },
+    {
+      "id": 33,
+      "name": "Phrases with 3 words",
+      "rationale": "0",
+      "description": "",
+      "content": [],
+      "checked": ""
+    },
+    {
+      "id": 34,
+      "name": "Phrases with 4 words",
+      "rationale": "1",
+      "description": "",
+      "content": [
+        {
+          "name": "никто не читает теги",
+          "found": [
+            "The keyword is found in title",
+            "The keyword is found in meta-description",
+            "The keyword is found in meta-description"
+          ],
+          "repeats": 3,
+          "frequency": 0.06
+        }
+      ],
+      "checked": ""
+    }
+  ],
+  "percent": 0,
+  "warning": 0,
+  "error": 0
+}

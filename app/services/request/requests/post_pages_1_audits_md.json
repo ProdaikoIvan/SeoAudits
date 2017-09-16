@@ -1,0 +1,34 @@
+{
+  "id": 3,
+  "name": "Meta Description",
+  "description": "Wir beraten und unterstützen kleine und mittelständische Unternehmen im Bereich Internet- und E-Commerce, um einen modernen Internet-Auftritt zu realisieren",
+  "criterias": [
+    {
+      "id": 9,
+      "name": "Meta Description length",
+      "rationale": "1054 pixels",
+      "description": "Meta <description> tag may be used by the search engines to create a snippet of your webpage. Its length may be unlimited, but search engines limit the snippet size to 160 characters and so the recommended size for the tag is 50 - 160 characters.",
+      "content": null,
+      "checked": "warning"
+    },
+    {
+      "id": 10,
+      "name": "Add keyword in the Meta Description tag",
+      "rationale": null,
+      "description": "Search engines use the Meta Description tag to make a snippet and highlight the keywords that coincide with the search query. Thus the user has a basic understanding of the webpage's content and what it contains of. For this reason it is advised to use a broadly matching keyword in the Meta Description.",
+      "content": null,
+      "checked": "error"
+    },
+    {
+      "id": 11,
+      "name": "Avoid duplicate Meta Description tags",
+      "rationale": null,
+      "description": "Unique Meta Description tags are useful for both search engines and users. Prepare your Meta Descriptions wisely and that will help to draw more attention, traffic and popularity to your website.* 100 pages of your website have been analyzed', 'No pages with duplicate Description are found",
+      "content": "No pages with duplicate Description are found",
+      "checked": "passed"
+    }
+  ],
+  "percent": 33,
+  "warning": 1,
+  "error": 1
+}

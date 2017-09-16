@@ -1,0 +1,84 @@
+<div class="row containerComponent">
+    <div class="content-header">
+        <h2>{{vm.model.name}}</h2>
+    </div>
+    <div ng-if="vm.model.warning > 0" class="content-error">
+        <div class="warning-block">
+            <img src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                 alt="Warning">
+            {{vm.model.warning}}
+        </div>
+        <div  ng-if="vm.model.error > 0" class="error-block">
+            <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                 alt="Error">
+            {{vm.model.error}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in vm.model.criterias">
+            <div class="component-item">
+                <div class="component-title-container">
+                    <h4 class="component-title">
+                        <img ng-if="item.checked == 'passed'"
+                             src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'warning'"
+                             src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'error'"
+                             src="../../../../SEO-Audit/app/content/img/Error.svg"
+                             alt="Check">
+                        {{item.name}}
+                    </h4>
+                    <div class="component-TitleDescription" ng-if="!vm.isString(item.rationale)">
+                        <span>DoFollow: {{item.rationale.DoFollow}}</span>
+                        <span>NoFollow: {{item.rationale.NoFollow}}</span>
+                    </div>
+                    <div class="component-TitleLinks" ng-if="item.content && item.id != 38">
+                        <button class="btn btn-success" type="button">
+                            <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
+                            Get the backlinks
+                        </button>
+                    </div>
+                </div>
+                <div class="component-content">
+                    <div class="component-information">
+                        <div class="component-text" ng-bind-html="item.rationale" ng-if="vm.isString(item.rationale)"></div>
+                        <div class="component-text" ng-bind-html="item.rationale.title" ng-if="!vm.isString(item.rationale)"></div>
+                    </div>
+                    <div class="component-details-block">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#{{'linksAnalysis' + item.id}}" aria-expanded="false" aria-controls="{{'linksAnalysis' + item.id}}">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="{{'linksAnalysis' + item.id}}">
+                <div class="well">
+                    {{item.description}}
+                </div>
+            </div>
+            <div class="component-TitleDescription " ng-if="item.id == 38">
+                <table  class="table table-condensed">
+                    <tr>
+                        <th>Url</th>
+                        <th>Response status code</th>
+                        <th>Status</th>
+                        <th>MOZ PA</th>
+                    </tr>
+                    <tr ng-repeat="content in item.content" style="height: 50px" class="imagesAnalysis-tableContent">
+                        <td><a href="{{content.link}}" target="_blank">{{content.link}}</a></td>
+                        <td>{{content.code}}</td>
+                        <td>{{content.status}}</td>
+                        <td>{{content.moz_pa}} kB</td>
+                    </tr>
+                </table>
+                <button class="btn btn-default" ng-click="vm.showAllLinks()">{{vm.titleButtonShowLinks}}</button>
+            </div>
+        </li>
+    </ul>
+</div>
