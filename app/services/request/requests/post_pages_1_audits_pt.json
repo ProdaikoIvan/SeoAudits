@@ -1,34 +1,38 @@
 {
-  "id": 2,
+  "id": 4,
   "name": "Page's Title",
   "description": "Intent GmbH - Professionelle Weblösungen und Onlineshops",
   "criterias": [
     {
-      "id": 5,
+      "id": 14,
+      "type": 5,
       "name": "Title tag length",
-      "rationale": "398 pixels",
+      "rationale": "<i class=\"warning\">398</i> pixels",
       "description": "<title> tag carries the page name both to users and search engines. It is a very important SERPs element as it reveals the contents of the page and its correlation with the search query. Optimal size for the Title tag does not exceed 70 characters.",
       "content": null,
       "checked": "warning"
     },
     {
-      "id": 6,
+      "id": 15,
+      "type": 6,
       "name": "Title tag needs to include a keyword",
       "rationale": null,
       "description": "The content of the <title> tag would be your page's name in the SERPs of search engines. The keywords the user was looking for would be highlighted so it is important that the keywords are mentioned.",
-      "content": "<i>Intent</i> GmbH - Professionelle Weblösungen und Onlineshops",
+      "content": "<i class=\"passed\">Intent</i> GmbH - Professionelle Weblösungen und Onlineshops",
       "checked": "passed"
     },
     {
-      "id": 7,
+      "id": 16,
+      "type": 7,
       "name": "Start the Title tag with a keyword",
       "rationale": null,
       "description": "Title tag is an important on-site optimization and ranking factor. Title tags starting with a keyword will be more effective than Title tags with the keyword added at other parts of it.",
-      "content": "<i>Intent</i> GmbH - Professionelle Weblösungen und Onlineshops",
+      "content": "<i class=\"passed\">Intent</i> GmbH - Professionelle Weblösungen und Onlineshops",
       "checked": "passed"
     },
     {
-      "id": 8,
+      "id": 17,
+      "type": 8,
       "name": "Avoid duplicate Titles",
       "rationale": null,
       "description": "Every page of a website needs to have a unique Title. This is important not only for the analyzed page ranking but for the netter rankings of other pages. <b>* 100 pages of your website have been analyzed</b>",
@@ -38,5 +42,5 @@
   ],
   "percent": 75,
   "warning": 1,
-  "error": 1
+  "error": 0
 }

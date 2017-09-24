@@ -1,7 +1,9 @@
 .containerApp{
     /*min-width: 992px;*/
 }
-
+li{
+   list-style-type: none;
+}
 
 .containerComponent{
     padding: 30px 0 20px 0;
@@ -21,7 +23,12 @@
 .content-header h2{
     margin: 0;
 }
-
+.component-title{
+    display: flex;
+}
+.component-title-info{
+    margin-left: 20px;
+}
 .containerComponent:after,
 .containerComponent::before
 {
@@ -31,6 +38,8 @@
 .warning-block,
 .error-block{
     font-weight: 700;
+
+    display: inherit;
 }
 .warning-block img,
 .error-block img{
@@ -46,6 +55,7 @@
 .component-item{
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 .component-title-container{
     display: flex;
@@ -63,12 +73,18 @@
 .component-TitleDescription > i{
     color: #4cc048;
 }
+.component-TitleDescription > .warning{
+    color: #F5A645;
+}
+.component-TitleDescription > .error{
+    color: #FF6A4C;
+}
 .component-TitleDescription > .table{
     margin-top: 15px;
 }
 .component-TitleDescription,
 .component-TitleLinks{
-    margin-left: 27px;
+    margin-left: 20px;
     margin-top: 5px;
 }
 .component-TitleLinks > button{
@@ -84,8 +100,22 @@
 .component-description{
     text-align: right;
 }
+.component-text{
+    font-style: italic;
+    color:#34434e;
+}
 .component-text > i{
     color: #4cc048;
+    font-style: normal;
+}
+
+.component-text > .warning{
+    color: #F5A645;
+    font-style: normal;
+}
+.component-text > .error{
+    color: #FF6A4C;
+    font-style: normal;
 }
 .component-details-block{
     margin-left: 10px;
@@ -113,4 +143,24 @@ body::-webkit-scrollbar-thumb
     border-radius: 5px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
+}
+
+.linksContent{
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 600px) {
+    /*.containerComponent{*/
+        /*flex-direction: column;*/
+    /*}*/
+
+}
+@media screen and (max-width: 600px) {
+    .component-item{
+        flex-direction: column;
+    }
+    .component-content{
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
 }

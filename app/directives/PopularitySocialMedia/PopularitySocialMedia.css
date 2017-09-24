@@ -1,0 +1,107 @@
+.popularitySocial-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+}
+
+/*.popularitySocial-container > div{*/
+/*margin: 0 5px;*/
+/*}*/
+.popularitySocial-container > div > h4 {
+    margin-bottom: 0;
+
+}
+
+.popularitySocial-facebook,
+.popularitySocial-twitter,
+.popularitySocial-instagram,
+.popularitySocial-googlePlus,
+.popularitySocial-pinterest {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.popularitySocial-facebook {
+    margin-left: 0;
+}
+
+.popularitySocial-container .social-logo {
+    width: 100%;
+    text-align: center;
+    padding: 2px 15px 4px 15px;
+    border-radius: 2px;
+}
+
+.popularitySocial-facebook > .social-logo {
+    background: #395185;
+}
+
+.popularitySocial-twitter > .social-logo {
+    background: #395185;
+}
+
+.popularitySocial-twitter > .social-logo {
+    background: #41ABE1;
+}
+
+.popularitySocial-instagram > .social-logo {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.popularitySocial-googlePlus > .social-logo {
+    background: #DB4437;
+}
+
+.popularitySocial-pinterest > .social-logo {
+    background: #BD081C;
+}
+
+.container-social-media-buttons {
+    padding: 0 19px;
+}
+
+.container-social-media-buttons .social-logo {
+    width: 100%;
+    text-align: center;
+    padding: 8px 8px 8px 10px;
+    border-radius: 2px;
+}
+
+.facebook-buttons,
+.twitter-buttons,
+.instagram-buttons,
+.googlePlus-buttons,
+.pinterest_buttons {
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.facebook-buttons > .social-logo {
+    background: #395185;
+    margin-right: 15px;
+}
+
+.twitter-buttons > .social-logo {
+    background: #41ABE1;
+    margin-right: 15px;
+}
+
+.instagram-buttons > .social-logo {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    margin-right: 15px;
+}
+
+.googlePlus-buttons > .social-logo {
+    background: #DB4437;
+    margin-right: 15px;
+}
+
+.pinterest_buttons > .social-logo {
+    background: #BD081C;
+    margin-right: 15px;
+}

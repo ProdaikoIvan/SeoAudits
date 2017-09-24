@@ -1,0 +1,40 @@
+.headerTags-sort-h{
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.headerTags-sort-h button{
+    flex-grow: 1;
+    margin: 0 5px 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.headerTags-sort-h .count{
+    margin-left: 10px;
+}
+.headerTags-sort-h button:focus{
+    outline: none;
+}
+.activeHeader{
+    color: #37a1e4;
+}
+.activeHeaderButton{
+    background: #ccc;
+}
+/*.component-TitleLinks .headerName{*/
+    /*font-weight: 700;*/
+/*}*/
+.header-TitleLinks{
+    font-style: italic;
+}
+.header-TitleLinks  .text{
+    font-weight: 700;
+}
+.header-titleLink-secondElement{
+    margin-bottom: 5px;
+}
+@media screen and( max-width: 600px) {
+    .header-titleLink-secondElement{
+        margin-bottom: 10px;
+    }
+}

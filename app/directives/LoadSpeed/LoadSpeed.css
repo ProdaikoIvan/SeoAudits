@@ -1,0 +1,11 @@
+.loadAnalysis-tableContent-path,
+.loadAnalysis-tableContent-link{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.loadAnalysis-tableContent-size{
+    white-space: nowrap;
+}
+.loadSpead-table .headTable{
+ background: #37A1E4;
+}

@@ -8,7 +8,7 @@
                  alt="Warning">
             {{vm.model.warning}}
         </div>
-        <div  ng-if="vm.model.error > 0" class="error-block">
+        <div ng-if="vm.model.error > 0" class="error-block">
             <img src="../../../../SEO-Audit/app/content/img/Error.svg"
                  alt="Error">
             {{vm.model.error}}
@@ -31,24 +31,32 @@
                         <img ng-if="item.checked == 'error'"
                              src="../../../../SEO-Audit/app/content/img/Error.svg"
                              alt="Check">
-                        {{item.name}}
+
+                        <div ng-if="vm.isString(item.name)">{{item.name}}</div>
+                        <div  ng-if="!vm.isString(item.name)">{{item.name[0]}}</div>
                     </h4>
+                    <div class="component-title-info"  ng-if="!vm.isString(item.name)">{{item.name[1]}}</div>
                     <!--<div class="component-TitleDescription">test</div>-->
                     <div class="component-TitleLinks" ng-if="item.content">
-                        <button class="btn btn-success" type="button">
+                        <button class="btn btn-success" type="button" ng-click="vm.openLinks(item.content)">
                             <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
                             Get the backlinks
                         </button>
                     </div>
                 </div>
-                <div class="component-content">
-                    <div class="component-information">
+                <div class="component-content" >
+                    <div class="component-information" ng-if="vm.isString(item.rationale)">
                         <div class="component-text" ng-bind-html="item.rationale"></div>
-                        <div class="component-description">test</div>
+                        <!--<div class="component-description" ng-bind-html="item.rationale[1]"></div>-->
+                    </div>
+                    <div class="component-information" ng-if="!vm.isString(item.rationale)">
+                        <div class="component-text" ng-bind-html="item.rationale[0]"></div>
+                        <div class="component-description" ng-bind-html="item.rationale[1]"></div>
                     </div>
                     <div class="component-details-block">
                         <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                data-target="#{{'major' + item.id}}" aria-expanded="false" aria-controls="{{'major' + item.id}}">
+                                data-target="#{{'major' + item.id}}" aria-expanded="false"
+                                aria-controls="{{'major' + item.id}}">
                             Details
                         </button>
                     </div>
@@ -61,4 +69,28 @@
             </div>
         </li>
     </ul>
+</div>
+
+<div class="modal fade" id="links" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Links</h4>
+            </div>
+            <div class="modal-body">
+                <div class="linksContent" ng-repeat="link in vm.linksContent">{{link}}</div>
+                <div class="well well-sm">
+                    It is recommended to load only the unique domain backlinks to avoid
+                    excessive data from the websites where links are sitewide or places on multiple pages. Only the
+                    first 50000 backlinks will be loaded
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>

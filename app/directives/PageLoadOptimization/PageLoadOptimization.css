@@ -1,6 +1,40 @@
 .pageLoad-header{
     display: flex;
+    flex-direction: row;
 }
 .pageLoad-header button{
     margin-left: 5px;
+}
+.pageLoadOptimization-containerInfo{
+    display: flex;
+    align-items: flex-start;
+}
+.image-example-site{
+    width: 30%;
+    padding-left:20px;
+
+}
+.pageLoadOptimization-containerInfo > ul{
+    width: 100%;
+}
+.image-example-site img{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+}
+@media screen and (max-width: 800px){
+    .pageLoad-header{
+        flex-direction: column;
+    }
+    .container-switcher-pageLoad{
+        margin-top: 10px;
+    }
+    .pageLoadOptimization-containerInfo{
+        flex-direction: column-reverse;
+    }
+    .image-example-site {
+        width: 100%;
+        padding: 20px;
+    }
 }

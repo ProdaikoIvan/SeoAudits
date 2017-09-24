@@ -9,7 +9,6 @@
     function PopularitySocialMediaCtrl($scope) {
         this.$onInit = function() {
             var vm = this;
-            console.log(this);
         };
     }
 })();

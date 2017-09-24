@@ -1,12 +1,13 @@
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('app')
         .directive('initialIndicators', initialIndicators);
 
-        initialIndicators.$inject = [];
-    function initialIndicators() {
+    initialIndicators.$inject = ['$window'];
+
+    function initialIndicators($window) {
         var directive = {
             bindToController: true,
             controller: 'initialIndicatorsCtrl',
@@ -19,9 +20,30 @@
             }
         };
         return directive;
-        
-        function link(scope, element, attrs) {
 
+        function link(scope, element, attrs) {
+            var hideElements = angular.element('.hideElement');
+            var desktopChart = angular.element('.desktopChart');
+            var mobileChart = angular.element('.mobileChart');
+
+            visibleInfo($window.innerWidth);
+
+            function visibleInfo(widthWindow) {
+                widthWindow < 600 ? hideElements.addClass('hideElement-initialIndicators'):  hideElements.removeClass('hideElement-initialIndicators');
+                widthWindow < 800 ? mobile(): desktop();
+            }
+            angular.element($window).bind('resize', function () {
+                visibleInfo($window.innerWidth);
+            });
+
+            function mobile() {
+                desktopChart.addClass('hideElement-initialIndicators');
+                mobileChart.removeClass('hideElement-initialIndicators');
+            }
+            function desktop() {
+                mobileChart.addClass('hideElement-initialIndicators');
+                desktopChart.removeClass('hideElement-initialIndicators');
+            }
         }
     }
 })();

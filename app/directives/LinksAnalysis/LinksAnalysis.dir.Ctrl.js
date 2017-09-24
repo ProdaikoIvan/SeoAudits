@@ -9,9 +9,10 @@
     function LinksAnalysisCtrl($scope) {
         this.$onInit = function() {
             var vm = this;
+            vm.linksContent = [];
             vm.links = [];
             vm.titleButtonShowLinks = "Show All";
-
+            vm.openLinks = openLinks;
             vm.isString = isString;
             vm.showAllLinks = showAllLinks;
 
@@ -23,7 +24,6 @@
                 if(vm.flag && vm.model.criterias[3].content.length > 5){
                     vm.links = vm.model.criterias[3].content.slice();
                     vm.model.criterias[3].content.length = 5;
-                    console.log(vm.links);
                 }
                 vm.flag = false;
             });
@@ -41,6 +41,13 @@
             }
             function isString(obj) {
                 return angular.isString(obj);
+            }
+            
+            function openLinks(data) {
+                vm.linksContent.length = 0;
+                vm.linksContent.push(data);
+                console.log(data);
+                $('#linksAnalysis').modal('show');
             }
         };
 

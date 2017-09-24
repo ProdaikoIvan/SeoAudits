@@ -1,0 +1,136 @@
+<div class="row containerComponent">
+    <div class="content-header">
+        <h2>{{vm.model.name}}</h2>
+    </div>
+    <div ng-if="vm.model.warning > 0" class="content-error">
+        <div class="warning-block">
+            <img src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                 alt="Warning">
+            {{vm.model.warning}}
+        </div>
+        <div ng-if="vm.model.error > 0" class="error-block">
+            <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                 alt="Error">
+            {{vm.model.error}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in vm.model.criterias">
+            <div class="component-item">
+                <div class="component-title-container">
+                    <h4 class="component-title">
+                        <img ng-if="item.checked == 'passed'"
+                             src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'warning'"
+                             src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'error'"
+                             src="../../../../SEO-Audit/app/content/img/Error.svg"
+                             alt="Check">
+                        {{item.name}}
+                    </h4>
+
+                </div>
+                <div class="component-content">
+                    <div class="component-information">
+                        <div class="component-text" ng-if="vm.isString(item.rationale)"
+                             ng-bind-html="item.rationale"></div>
+                    </div>
+                    <div class="component-details-block">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#{{'major' + item.id}}" aria-expanded="false"
+                                aria-controls="{{'major' + item.id}}">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="{{'major' + item.id}}">
+                <div class="well">
+                    {{item.description}}
+                </div>
+            </div>
+            <div class="component-TitleLinks" ng-if="!vm.isString(item.rationale)">
+                <div class="headerTags-sort-h">
+                    <button class="btn btn-default" ng-class="vm.activeHeader === 'h1' ? 'activeHeaderButton': ''"
+                            ng-click="vm.selectHeaders('h1')">
+                        <span class="name">H1:</span>
+                        <span class="count">{{vm.h1}}</span>
+                    </button>
+                    <button class="btn btn-default" ng-class="vm.activeHeader === 'h2' ? 'activeHeaderButton': ''"
+                            ng-click="vm.selectHeaders('h2')">
+                        <span class="name">H2:</span>
+                        <span class="count">{{vm.h2}}</span>
+                    </button>
+                    <button class="btn btn-default" ng-class="vm.activeHeader === 'h3' ? 'activeHeaderButton': ''"
+                            ng-click="vm.selectHeaders('h3')">
+                        <span class="name">H3:</span>
+                        <span class="count">{{vm.h3}}</span>
+                    </button>
+                    <button class="btn btn-default" ng-class="vm.activeHeader === 'h4' ? 'activeHeaderButton': ''"
+                            ng-click="vm.selectHeaders('h4')">
+                        <span class="name">H4:</span>
+                        <span class="count">{{vm.h4}}</span>
+                    </button>
+                    <button class="btn btn-default" ng-class="vm.activeHeader === 'h5' ? 'activeHeaderButton': ''"
+                            ng-click="vm.selectHeaders('h5')">
+                        <span class="name">H5:</span>
+                        <span class="count">{{vm.h5}}</span>
+                    </button>
+                    <button class="btn btn-default" ng-class="vm.activeHeader === 'h6' ? 'activeHeaderButton': ''"
+                            ng-click="vm.selectHeaders('h6')">
+                        <span class="name">H6:</span>
+                        <span class="count">{{vm.h6}}</span>
+                    </button>
+                </div>
+                <table class="table table-striped">
+                    <tr ng-repeat="el in item.rationale">
+                        <td ng-class="vm.activeHeader === el.type? 'activeHeader': ''"><{{el.type}}></td>
+                        <td>{{el.name}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="component-TitleLinks header-TitleLinks" ng-if="$index === 1">
+                <div ng-repeat="el in item.content" class="header-titleLink-secondElement">
+                    <span class="tag">
+                        {{vm.tag(el, false)}}
+                    </span>
+                    <span class="text">
+                        {{vm.textTag(el)}}
+                    </span>
+                    <span class="tag">
+                        {{vm.tag(el, true)}}
+                    </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="modal fade" id="links" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Links</h4>
+            </div>
+            <div class="modal-body">
+                <div class="linksContent" ng-repeat="link in vm.linksContent">{{link}}</div>
+                <div class="well well-sm">
+                    It is recommended to load only the unique domain backlinks to avoid
+                    excessive data from the websites where links are sitewide or places on multiple pages. Only the
+                    first 50000 backlinks will be loaded
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

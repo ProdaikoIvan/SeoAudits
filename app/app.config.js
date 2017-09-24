@@ -1,7 +1,7 @@
 angular.module('app')
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function ($stateProvider, $urlRouterProvider, $locationProvider) {
-            $urlRouterProvider.otherwise('/create');
+            $urlRouterProvider.otherwise('/result');
             $stateProvider
                 .state('create', {
                     url: '/create',

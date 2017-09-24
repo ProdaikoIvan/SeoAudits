@@ -1,85 +1,87 @@
 {
-  "id": 6,
+  "id": 8,
   "name": "Images analysis",
   "description": null,
   "criterias": [
     {
-      "id": 18,
+      "id": 27,
+      "type": 18,
       "name": "Alt attribute",
-      "rationale": "Add Alt for 11 images",
+      "rationale": "Add Alt for <i class=\"error\">11 images</i>",
       "description": "Alt attribute helps to specify the text that will be displayed on the page if the image for some reason is not getting loaded. Informative Alt attribute and the file name help to index the image on the page more effectively.",
       "content": [
         {
           "name": "https://intent.de/wp-content/uploads/2016/03/intent-cv-bl.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 15
+          "size": 18
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-ma.jpg",
           "alt": null,
-          "unique_status": "unique",
-          "size": 19
+          "unique_status": "not unique",
+          "size": 10
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-s04.jpg",
           "alt": null,
-          "unique_status": "not unique",
-          "size": 9
+          "unique_status": "unique",
+          "size": 5
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-wb.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 16
+          "size": 13
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-4jz.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 6
+          "size": 16
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-hk.jpg",
           "alt": null,
           "unique_status": "unique",
-          "size": 20
+          "size": 5
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-1-4.jpg",
           "alt": null,
-          "unique_status": "not unique",
-          "size": 14
+          "unique_status": "unique",
+          "size": 18
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-2-4.jpg",
           "alt": null,
-          "unique_status": "unique",
-          "size": 14
+          "unique_status": "not unique",
+          "size": 10
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-circle.jpg",
           "alt": null,
-          "unique_status": "unique",
-          "size": 15
+          "unique_status": "not unique",
+          "size": 7
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-3-4.jpg",
           "alt": null,
           "unique_status": "unique",
-          "size": 11
+          "size": 16
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-4-4.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 20
+          "size": 8
         }
       ],
       "checked": "warning"
     },
     {
-      "id": 19,
+      "id": 28,
+      "type": 19,
       "name": "Use short and informative file names",
       "rationale": null,
       "description": "There is hardly an official limit set by the search engines regarding preferred image file length, however in SEO’s best practices the limit of 70 characters is considered as maximum. And of course the image length should not be longer than the surrounding Alt, Title or Caption. The audit shows a warning for the image files longer than 70 characters.",
@@ -87,7 +89,8 @@
       "checked": "passed"
     },
     {
-      "id": 20,
+      "id": 29,
+      "type": 20,
       "name": "Do not use underscore in image files",
       "rationale": null,
       "description": "It's recommended to avoid using underscores in the file names. Use the hyphen instead. Some search engines interpret underscore as a letter character while hyphen as a space. Thus the search engines will easier match the file names with the keywords",
@@ -95,7 +98,8 @@
       "checked": "passed"
     },
     {
-      "id": 21,
+      "id": 30,
+      "type": 21,
       "name": "The keyword is used in Alt attributes",
       "rationale": null,
       "description": "Use of the keywords in Alt attributes has a positive influence on the webpage ranking in search engines.",
@@ -104,100 +108,101 @@
           "name": "http://intent.de/wp-content/uploads/2016/06/intent-x1.png",
           "alt": "Intent Webl sungen und Onlineshops",
           "unique_status": "not unique",
-          "size": 19
+          "size": 5
         },
         {
           "name": "http://intent.de/wp-content/uploads/2016/06/intent-x2.png",
           "alt": "Intent Webl sungen und Onlineshops",
-          "unique_status": "unique",
-          "size": 16
+          "unique_status": "not unique",
+          "size": 13
         }
       ],
       "checked": "passed"
     },
     {
-      "id": 22,
+      "id": 31,
+      "type": 22,
       "name": "Use unique images",
-      "rationale": "Found non-unique images: 7",
+      "rationale": "Found<i class=\"error\"> non-unique images: 9</i>",
       "description": "Search engines can distinguish not only unique textual content but also unique images. Use of unique images on a webpage you promote is a positive ranking factor as search engines appreciate your effort to use non-duplicate content of every kind on the pages of your website.",
       "content": [
         {
           "name": "http://intent.de/wp-content/uploads/2016/06/intent-x1.png",
           "alt": "Intent Webl sungen und Onlineshops",
           "unique_status": "not unique",
-          "size": 19
+          "size": 5
         },
         {
           "name": "http://intent.de/wp-content/uploads/2016/06/intent-x2.png",
           "alt": "Intent Webl sungen und Onlineshops",
-          "unique_status": "unique",
-          "size": 16
+          "unique_status": "not unique",
+          "size": 13
         },
         {
           "name": "https://intent.de/wp-content/uploads/2016/03/intent-cv-bl.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 15
+          "size": 18
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-ma.jpg",
           "alt": null,
-          "unique_status": "unique",
-          "size": 19
+          "unique_status": "not unique",
+          "size": 10
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-s04.jpg",
           "alt": null,
-          "unique_status": "not unique",
-          "size": 9
+          "unique_status": "unique",
+          "size": 5
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-wb.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 16
+          "size": 13
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-4jz.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 6
+          "size": 16
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-hk.jpg",
           "alt": null,
           "unique_status": "unique",
-          "size": 20
+          "size": 5
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-1-4.jpg",
           "alt": null,
-          "unique_status": "not unique",
-          "size": 14
+          "unique_status": "unique",
+          "size": 18
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-2-4.jpg",
           "alt": null,
-          "unique_status": "unique",
-          "size": 14
+          "unique_status": "not unique",
+          "size": 10
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-circle.jpg",
           "alt": null,
-          "unique_status": "unique",
-          "size": 15
+          "unique_status": "not unique",
+          "size": 7
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-3-4.jpg",
           "alt": null,
           "unique_status": "unique",
-          "size": 11
+          "size": 16
         },
         {
           "name": "https://intent.de/wp-content/uploads/2015/02/intent-4-4.jpg",
           "alt": null,
           "unique_status": "not unique",
-          "size": 20
+          "size": 8
         }
       ],
       "checked": "error"

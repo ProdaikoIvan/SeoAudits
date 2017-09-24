@@ -1,18 +1,24 @@
 {
   "id": 13,
   "name": "Page Load Optimization Desktop",
-  "description": null,
+  "description": "<img src=\"content/img/pagespeed_desktop.jpg\" alt=\"desktop image (demo)\">",
   "criterias": [
     {
       "id": 60,
+      "type": 42,
       "name": "Avoid landing page redirects",
       "rationale": null,
-      "description": "titleEQUALYour page has no redirects. Learn more about <a target =\"_blank\" href=\"https://developers.google.com/speed/docs/insights/AvoidRedirects\">avoiding landing page redirects</a>.",
+      "description": [
+        {
+          "title": "Your page has no redirects. Learn more about <a target =\"_blank\" href=\"https://developers.google.com/speed/docs/insights/AvoidRedirects\">avoiding landing page redirects</a>."
+        }
+      ],
       "content": null,
       "checked": "error"
     },
     {
       "id": 61,
+      "type": 43,
       "name": "Enable compression",
       "rationale": null,
       "description": [
@@ -28,6 +34,7 @@
     },
     {
       "id": 62,
+      "type": 44,
       "name": "Leverage browser caching",
       "rationale": null,
       "description": [
@@ -66,11 +73,12 @@
     },
     {
       "id": 63,
+      "type": 45,
       "name": "Reduce server response time",
       "rationale": null,
       "description": [
         {
-          "title": "Your server responded quickly. Learn more about <a target =\"_blank\" href=\"https://developers.google.com/speed/docs/insights/Server\">server response time optimization</a>."
+          "title": "In our test, your server responded in 0.20 seconds. There are many factors that can slow down your server response time. <a target =\"_blank\" href=\"https://developers.google.com/speed/docs/insights/Server\">Please read our recommendations</a> to learn how you can monitor and measure where your server is spending the most time."
         }
       ],
       "content": null,
@@ -78,6 +86,7 @@
     },
     {
       "id": 64,
+      "type": 46,
       "name": "Minify CSS",
       "rationale": null,
       "description": [
@@ -96,6 +105,7 @@
     },
     {
       "id": 65,
+      "type": 48,
       "name": "Minify JavaScript",
       "rationale": null,
       "description": [
@@ -117,6 +127,7 @@
     },
     {
       "id": 66,
+      "type": 47,
       "name": "Minify HTML",
       "rationale": null,
       "description": [
@@ -129,6 +140,7 @@
     },
     {
       "id": 67,
+      "type": 49,
       "name": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
       "rationale": null,
       "description": [
@@ -141,6 +153,7 @@
     },
     {
       "id": 68,
+      "type": 50,
       "name": "Optimize images",
       "rationale": null,
       "description": [
@@ -170,6 +183,7 @@
     },
     {
       "id": 69,
+      "type": 51,
       "name": "Prioritize visible content",
       "rationale": null,
       "description": [
@@ -182,6 +196,7 @@
     },
     {
       "id": 70,
+      "type": 52,
       "name": "Avoid app install interstitials that hide content",
       "rationale": null,
       "description": "",
@@ -190,6 +205,7 @@
     },
     {
       "id": 71,
+      "type": 53,
       "name": "Avoid plugins",
       "rationale": null,
       "description": "",
@@ -198,6 +214,7 @@
     },
     {
       "id": 72,
+      "type": 54,
       "name": "Configure the viewport",
       "rationale": null,
       "description": "",
@@ -206,6 +223,7 @@
     },
     {
       "id": 73,
+      "type": 55,
       "name": "Size content to viewport",
       "rationale": null,
       "description": "",
@@ -214,6 +232,7 @@
     },
     {
       "id": 74,
+      "type": 56,
       "name": "Size tap targets appropriately",
       "rationale": null,
       "description": "",
@@ -222,6 +241,7 @@
     },
     {
       "id": 75,
+      "type": 57,
       "name": "Use legible font sizes",
       "rationale": null,
       "description": "",
@@ -231,5 +251,5 @@
   ],
   "percent": 38,
   "warning": 3,
-  "error": 3
+  "error": 7
 }

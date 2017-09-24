@@ -16,7 +16,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <div class="alert alert-info metadescription-alert" ng-if="vm.model.description" role="alert"><span>Meta description: </span> <p> {{vm.model.description}}</p></div>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="item in vm.model.criterias">
             <div class="component-item">
@@ -38,8 +38,8 @@
                 </div>
                 <div class="component-content">
                     <div class="component-information">
-                        <div class="component-text" ng-bind-html="item.rationale"></div>
-                        <div class="component-description">test</div>
+                        <div class="component-text" ng-bind-html="item.rationale">{{item.rationale}}</div>
+                        <!--<div class="component-description" ng-bind-html="item.rationale"></div>-->
                     </div>
                     <div class="component-details-block">
                         <button class="btn btn-primary" type="button" data-toggle="collapse"

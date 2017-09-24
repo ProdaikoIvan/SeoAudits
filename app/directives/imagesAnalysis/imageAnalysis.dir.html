@@ -33,18 +33,33 @@
                              alt="Check">
                         {{item.name}}
                     </h4>
-                    <div class="component-TitleDescription imagesAnalysis-TitleDescription-info">{{item.rationale}}</div>
-                    <div class="component-TitleDescription imagesAnalysis-TitleDescription" ng-if="item.id != 22" >
+                    <div class="component-TitleDescription imagesAnalysis-TitleDescription-info" ng-bind-html="item.rationale"></div>
+                    <div class="component-TitleDescription imagesAnalysis-TitleDescription" ng-if="$index !== 4 && $index !== 3" >
                         <div ng-bind-html="content.name" ng-repeat="content in item.content"></div>
-                        <button ng-if="item.id === 18 && vm.AltAttribute.length > 5" class="btn btn-default" ng-click="vm.showAllAltAttribute()">{{vm.titleButtonShowAltAttribute}}</button>
-                        <button ng-if="item.id === 19 && vm.InformativeAttribute.length > 5" class="btn btn-default" ng-click="vm.showInformativeAltAttribute()">{{vm.titleButtonShowInformativAttribute}}</button>
-                        <button ng-if="item.id === 20 && vm.UnderscoreAttribute.length > 5" class="btn btn-default" ng-click="vm.showAllUnderscoreAttribute()">{{vm.titleButtonShowInformativeAttribute}}</button>
-                        <button ng-if="item.id === 21 && vm.KeywordAtributes.length > 5" class="btn btn-default" ng-click="vm.showAllKeywordAtributes()">{{vm.titleButtonShowKeywordAtributes}}</button>
+                        <!--<div  ng-repeat="content in item.content">-->
+                            <!--<span ng-bind-html="content.name"></span>-->
+                            <!--<span ng-bind-html="content.alt"></span>-->
+                        <!--</div>-->
+                        <button ng-if="$index === 0 && vm.AltAttribute.length > 5" class="btn btn-default" ng-click="vm.showAllAltAttribute()">{{vm.titleButtonShowAltAttribute}}</button>
+                        <button ng-if="$index === 1 && vm.InformativeAttribute.length > 5" class="btn btn-default" ng-click="vm.showInformativeAltAttribute()">{{vm.titleButtonShowInformativAttribute}}</button>
+                        <button ng-if="$index === 2 && vm.UnderscoreAttribute.length > 5" class="btn btn-default" ng-click="vm.showAllUnderscoreAttribute()">{{vm.titleButtonShowInformativeAttribute}}</button>
+                        <button ng-if="$index === 3 && vm.KeywordAtributes.length > 5" class="btn btn-default" ng-click="vm.showAllKeywordAtributes()">{{vm.titleButtonShowKeywordAtributes}}</button>
                     </div>
+                    <div class="component-TitleDescription imagesAnalysis-TitleDescription" ng-if="$index !== 4 && $index === 3" >
+
+                        <div ng-repeat="content in item.content">
+                            <span ng-bind-html="content.name"></span>
+                            <span ng-bind-html="content.alt"  class="imagesAnalysis-TitleDescription-info"></span>
+                        </div>
+                    <button ng-if="$index === 0 && vm.AltAttribute.length > 5" class="btn btn-default" ng-click="vm.showAllAltAttribute()">{{vm.titleButtonShowAltAttribute}}</button>
+                    <button ng-if="$index === 1 && vm.InformativeAttribute.length > 5" class="btn btn-default" ng-click="vm.showInformativeAltAttribute()">{{vm.titleButtonShowInformativAttribute}}</button>
+                    <button ng-if="$index === 2 && vm.UnderscoreAttribute.length > 5" class="btn btn-default" ng-click="vm.showAllUnderscoreAttribute()">{{vm.titleButtonShowInformativeAttribute}}</button>
+                    <button ng-if="$index === 3 && vm.KeywordAtributes.length > 5" class="btn btn-default" ng-click="vm.showAllKeywordAtributes()">{{vm.titleButtonShowKeywordAtributes}}</button>
+                </div>
                 </div>
                 <div class="component-content">
                     <div class="component-information">
-                        <div class="component-text" ng-bind-html="item.rationale"></div>
+                        <!--<div class="component-text" ng-bind-html="item.rationale"></div>-->
                         <!--<div class="component-description">test</div>-->
                     </div>
                     <div class="component-details-block">
@@ -60,9 +75,9 @@
                     {{item.description}}
                 </div>
             </div>
-            <div class="component-TitleDescription imagesAnalysis-TitleDescription-table" ng-if="item.id == 22">
-                <table  class="table table-condensed">
-                    <tr>
+            <div class="component-TitleDescription imagesAnalysis-TitleDescription-table" ng-if="$index == 4">
+                <table  class="table table-condensed imageAnalysis-table">
+                    <tr class="table-header">
                         <th></th>
                         <th>File</th>
                         <th>Status</th>
@@ -70,9 +85,9 @@
                     </tr>
                     <tr ng-repeat="content in item.content" style="height: 50px" class="imagesAnalysis-tableContent">
                         <td><img src="{{content.name}}" alt="{{content.name}}"></td>
-                        <td>{{content.name}}</td>
+                        <td class="imageAnalysis-link-cell">{{content.name}}</td>
                         <td>{{content.unique_status}}</td>
-                        <td>{{content.size}} kB</td>
+                        <td class="imageAnalysis-size-cell">{{content.size}} kB</td>
                     </tr>
                 </table>
             </div>

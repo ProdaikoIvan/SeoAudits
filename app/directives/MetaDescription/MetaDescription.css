@@ -1,1 +1,8 @@
+.metadescription-alert p{
+    margin-left: 120px;
 
+}
+.metadescription-alert span{
+    float: left;
+    font-style: italic;
+}

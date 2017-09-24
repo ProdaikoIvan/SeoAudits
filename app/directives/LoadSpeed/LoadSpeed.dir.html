@@ -1,0 +1,74 @@
+<div class="row containerComponent">
+    <div class="content-header">
+        <h2>{{vm.model.name}}</h2>
+    </div>
+    <div ng-if="vm.model.warning > 0" class="content-error">
+        <div class="warning-block">
+            <img src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                 alt="Warning">
+            {{vm.model.warning}}
+        </div>
+        <div  ng-if="vm.model.error > 0" class="error-block">
+            <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                 alt="Error">
+            {{vm.model.error}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in vm.model.criterias">
+            <div class="component-item">
+                <div class="component-title-container">
+                    <h4 class="component-title">
+                        <img ng-if="item.checked == 'passed'"
+                             src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'warning'"
+                             src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'error'"
+                             src="../../../../SEO-Audit/app/content/img/Error.svg"
+                             alt="Check">
+                        {{item.name}}
+                    </h4>
+                </div>
+                <div class="component-content">
+                    <div class="component-information">
+                        <div class="component-text" ng-if="vm.isString(item.rationale)" ng-bind-html="item.rationale"></div>
+                        <!--<div class="component-description">test</div>-->
+                    </div>
+                    <div class="component-details-block">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#{{'imageAnalysis' + item.id}}" aria-expanded="false" aria-controls="{{'imageAnalysis' + item.id}}">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="{{'imageAnalysis' + item.id}}">
+                <div class="well">
+                    {{item.description}}
+                </div>
+            </div>
+            <div class="component-TitleDescription imagesAnalysis-TitleDescription-table" ng-if="$index == 4">
+                <table  class="table table-condensed loadSpead-table">
+                    <tr class="headerTable">
+                        <th></th>
+                        <th>File</th>
+                        <th>Path</th>
+                        <th>Size</th>
+                    </tr>
+                    <tr ng-repeat="content in item.rationale" style="height: 50px" class="imagesAnalysis-tableContent">
+                        <td ng-bind-html="vm.logoFile(content.file)"></td>
+                        <td class="loadAnalysis-tableContent-path">{{content.file}}</td>
+                        <td class="loadAnalysis-tableContent-link"><a href="{{vm.linkDownloadedFiles(content.path)}}" target="_blank">{{content.path}}</a></td>
+                        <td class="loadAnalysis-tableContent-size">{{content.size}} kB</td>
+                    </tr>
+                </table>
+                <button class="btn btn-default" ng-click="vm.showAllDownloadedFiles()">{{vm.titleButtonShowDownloadedFiles}}</button>
+            </div>
+        </li>
+    </ul>
+</div>

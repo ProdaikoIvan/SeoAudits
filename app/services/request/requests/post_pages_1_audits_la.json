@@ -1,29 +1,38 @@
 {
-  "id": 10,
+  "id": 2,
   "name": "Links analysis",
   "description": null,
   "criterias": [
     {
-      "id": 35,
-      "name": "Backlinks(for the website)",
-      "rationale": "126",
+      "id": 5,
+      "type": 3,
+      "name": [
+        "Backlinks",
+        "(for the website)"
+      ],
+      "rationale": "<i class=\"passed\">126</i>",
       "description": "The number of the inbound backlinks\n     is one of the key SEO factors of any website. Having and adding quality\n      backlinks is a very important ranking factor. Meanwhile please notice \n      that search engines are paying attention not only to the quantity \n      but also to the quality of the backlinks. A backlink from a relevant \n      website with decent content will have a considerably better effect than \n      multiple links from irrelevant websites.",
       "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks",
       "checked": "passed"
     },
     {
-      "id": 36,
-      "name": "Backlinks(unique domains linking to the website)",
-      "rationale": "126",
+      "id": 6,
+      "type": 4,
+      "name": [
+        "Backlinks",
+        "(unique domains linking to the website)"
+      ],
+      "rationale": "<i class=\"passed\">34</i>",
       "description": "The number of backlinks from unique domains \n    is a significant criterion of how popular and competitive your website is. \n    100 links from 100 domains is considerably better than 1000 links from one domain.",
       "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks",
       "checked": "passed"
     },
     {
-      "id": 37,
+      "id": 7,
+      "type": 35,
       "name": "Outbound links",
       "rationale": {
-        "title": "0 Links",
+        "title": "<i class=\"passed\">0</i> Links",
         "DoFollow": 0,
         "NoFollow": 0
       },
@@ -32,10 +41,11 @@
       "checked": "passed"
     },
     {
-      "id": 38,
+      "id": 8,
+      "type": 36,
       "name": "Internal links",
       "rationale": {
-        "title": "17 Links",
+        "title": "<i class=\"passed\">17</i> Links",
         "DoFollow": 17,
         "NoFollow": 0
       },

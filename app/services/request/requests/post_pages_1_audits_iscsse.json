@@ -1,27 +1,28 @@
 {
-  "id": 5,
+  "id": 7,
   "name": "Index status and cached snapshot in the search engines",
   "description": null,
   "criterias": [
     {
-      "id": 17,
+      "id": 26,
+      "type": 17,
       "name": "The page is indexed",
       "rationale": [
         {
           "tooltip": "Google",
-          "image": "http://seoapi.loc/static/web/attachment/images/thumbnail/icn-google.svg"
+          "image": "content/img/icn-google-new.svg"
         },
         {
           "tooltip": "Yahoo",
-          "image": "http://seoapi.loc/static/web/attachment/images/thumbnail/icn-yahoo.svg"
+          "image": "content/img/icn-yahoo.svg"
         },
         {
           "tooltip": "Bing",
-          "image": "http://seoapi.loc/static/web/attachment/images/thumbnail/icn-bing.svg"
+          "image": "content/img/icn-bing.svg"
         },
         {
           "tooltip": "Yandex",
-          "image": "http://seoapi.loc/static/web/attachment/images/thumbnail/icn-yandex.svg"
+          "image": "content/img/yandex_site_check.svg"
         }
       ],
       "description": "Once a page is indexed by search engines it will be available in its SERPs however if the page is not indexed then the search engine knows nothing about it. Chances it will show up in the SERPs pages are second to none.",
@@ -33,7 +34,7 @@
             "url": "<cite>http://intent.de</cite>",
             "description": "<p>Wir beraten und unterstützen kleine und mittelständische Unternehmen im Bereich Internet- und E-Commerce, um einen modernen Internet-Auftritt zu realisieren</p>"
           },
-          "image": "http://seoapi.loc/static/web/attachment/images/img-logo-google.svg"
+          "image": "content/img/img-logo-google.svg"
         },
         {
           "tooltip": "Yahoo",
@@ -42,7 +43,7 @@
             "url": "<cite>http://intent.de</cite>",
             "description": "<p>Wir beraten und unterstützen kleine und mittelständische Unternehmen im Bereich Internet- und E-Commerce, um einen modernen Internet-Auftritt zu realisieren</p>"
           },
-          "image": "http://seoapi.loc/static/web/attachment/images/img-logo-yahoo.svg"
+          "image": "content/img/img-logo-yahoo.svg"
         },
         {
           "tooltip": "Bing",
@@ -51,7 +52,7 @@
             "url": "<cite>http://intent.de</cite>",
             "description": "<p>Wir beraten und unterstützen kleine und mittelständische Unternehmen im Bereich Internet- und E-Commerce, um einen modernen Internet-Auftritt zu realisieren</p>"
           },
-          "image": "http://seoapi.loc/static/web/attachment/images/img-logo-bing.svg"
+          "image": "content/img/img-logo-bing.svg"
         },
         {
           "tooltip": "Yandex",
@@ -60,7 +61,7 @@
             "url": "<cite>http://intent.de</cite>",
             "description": "<p>Wir beraten und unterstützen kleine und mittelständische Unternehmen im Bereich Internet- und E-Commerce, um einen modernen Internet-Auftritt zu realisieren</p>"
           },
-          "image": "http://seoapi.loc/static/web/attachment/images/img-logo-yandex.svg"
+          "image": "content/img/img-logo-yandex.svg"
         }
       ],
       "checked": "passed"

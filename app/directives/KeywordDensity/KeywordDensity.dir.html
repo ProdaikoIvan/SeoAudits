@@ -1,0 +1,92 @@
+<div class="row containerComponent">
+    <div class="content-header">
+        <h2>{{vm.model.name}}</h2>
+    </div>
+    <div ng-if="vm.model.warning > 0" class="content-error">
+        <div class="warning-block">
+            <img src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                 alt="Warning">
+            {{vm.model.warning}}
+        </div>
+        <div ng-if="vm.model.error > 0" class="error-block">
+            <img src="../../../../SEO-Audit/app/content/img/Error.svg"
+                 alt="Error">
+            {{vm.model.error}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
+    <ul class="list-group">
+        <li class="list-group-item topLink">
+            <ul class="list-group">
+                <li class="list-group-item topLink-element">
+                    <span>Words totally:</span>
+                    <span>{{vm.model.criterias[0].rationale}}</span>
+                </li>
+                <li class="list-group-item topLink-element">
+                    <span>Phrases with 2 words:</span>
+                    <span>{{vm.model.criterias[1].rationale}}</span>
+                </li>
+                <li class="list-group-item topLink-element">
+                    <span>Phrases with 3 words:</span>
+                    <span>{{vm.model.criterias[2].rationale}}</span>
+                </li>
+                <li class="list-group-item topLink-element">
+                    <span>Phrases with 4 words:</span>
+                    <span>{{vm.model.criterias[3].rationale}}</span>
+                </li>
+            </ul>
+        </li>
+        <li class="list-group-item" ng-if="item.content.length > 0" ng-repeat="item in vm.model.criterias">
+            <div class="keywordsDensity-item">
+                <div class="component-title-container">
+                    <h4 class="component-title">
+                        <img ng-if="item.checked == 'passed'"
+                             src="../../../../SEO-Audit/app/content/img/CheckPassed.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'warning'"
+                             src="../../../../SEO-Audit/app/content/img/Warning.svg"
+                             alt="Check">
+                        <img ng-if="item.checked == 'error'"
+                             src="../../../../SEO-Audit/app/content/img/Error.svg"
+                             alt="Check">
+                        {{item.name}}
+                    </h4>
+                    <!--<div class="component-TitleDescription">test</div>-->
+                    <div class="component-TitleLinks" ng-if="item.content">
+
+                    </div>
+                </div>
+            </div>
+            <table class="table table-condensed keywordsDensity-table-container">
+                <tr class="headTable">
+                    <th>Keywords</th>
+                    <th>Found in</th>
+                    <th>Repeats</th>
+                    <th>Frequency</th>
+                </tr>
+                <tr ng-repeat="content in item.content" style="height: 50px" class="imagesAnalysis-tableContent">
+                    <td>{{content.keywords}}</td>
+                    <td class="imageAnalysis-link-cell">{{content.foundIn}}</td>
+                    <td>{{content.repeats}}</td>
+                    <td class="imageAnalysis-size-cell">{{content.frequency}}%</td>
+                </tr>
+            </table>
+            <div class="keywordsDensity-buttons-container">
+                <div class="keywordsDensity-buttons-show">
+                    <button class="btn btn-default" type="button" ng-click="vm.showAll($index)"
+                            ng-hide="vm.contentTemp[$index] === undefined">
+                        {{vm.titleShowButtons[$index]}}
+                    </button>
+                </div>
+                <div class="keywordsDensity-buttons-export">
+                    <button class="btn btn-primary" type="button">
+                        Export
+                    </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+

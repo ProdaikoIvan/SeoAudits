@@ -1,10 +1,11 @@
 {
-  "id": 15,
+  "id": 14,
   "name": "Popularity In Social Media",
   "description": "Popularity in social media as well as the activity of your groups and pages increase your brand awareness and act as one of the search engines' ranking factors.",
   "criterias": [
     {
       "id": 76,
+      "type": 58,
       "name": "Page",
       "rationale": null,
       "description": "Social media authority of the page is a ranking \n    factor with an increasing importance. Google and other search engines watch closely \n    how popular a certain page across social networks and adjust its positions accordingly.",
@@ -29,6 +30,7 @@
     },
     {
       "id": 77,
+      "type": 59,
       "name": "Domain",
       "rationale": null,
       "description": "Social media popularity of a domain is an \n    integral part of the SEO strategy. An aged website that has never been mentioned in \n    social networks can hardly be considered as worthy. Neither by the user not by the search engine.",
@@ -53,6 +55,7 @@
     },
     {
       "id": 78,
+      "type": 60,
       "name": "Add social media buttons to the page",
       "rationale": null,
       "description": "Social media buttons help to share the content a \n    user liked at a single click. A study by Brightedge.com revealed that proper share buttons \n    can increase social media sharing by 700.",
@@ -78,5 +81,5 @@
   ],
   "percent": 67,
   "warning": 1,
-  "error": 1
+  "error": 0
 }

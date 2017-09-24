@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "id": 120,
+      "link": "www.popai.de/news/zukunft-des-einkaufens/lektu-rencheck-3-e-commerce-fu-r-klein-und-mittelsta-ndische-unt/2/1577"
+    },
+    {
+      "id": 119,
+      "link": "www.pirco.de/fachbuch-veroeffentlichung-e-commerce-fuer-klein-und-mittelstaendische-unternehmen/"
+    },
+    {
+      "id": 118,
+      "link": "business-panorama.de/news.php?newsid=388074"
+    },
+    {
+      "id": 117,
+      "link": "www.itnote.de/fachbuch-veroeffentlichung-e-commerce-fuer-klein-und-mittelstaendische-unternehmen/"
+    },
+    {
+      "id": 116,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/ro/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 115,
+      "link": "www.newdy.org/schweiz"
+    },
+    {
+      "id": 114,
+      "link": "www.dynserver.de/eintrag.php?id=983"
+    },
+    {
+      "id": 113,
+      "link": "www.newdy.org/suchmaschine"
+    },
+    {
+      "id": 112,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/fi/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 111,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/it/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 110,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/es/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 109,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/tr/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 108,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/sv/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 107,
+      "link": "www.bsozd.com/fachbuch-veroeffentlichung-e-commerce-fuer-klein-und-mittelstaendische-unternehmen-323644/"
+    },
+    {
+      "id": 106,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/sl/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 105,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/et/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 104,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/hr/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 103,
+      "link": "www.onlineshops-finden.de/nachrichten-online-shop/ca/wir-sind-ihre-onlineshop-agentur-fuer-shopware-systeme-10201403/"
+    },
+    {
+      "id": 102,
+      "link": "pressnetwork.de/fachbuch-veroeffentlichung-e-commerce-fuer-klein-und-mittelstaendische-unternehmen/"
+    },
+    {
+      "id": 101,
+      "link": "www.recht-finanzen.de/forum/affich-37779-mit-online-shop-selbststaendig-machen-was-muss-man-beachten"
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "http://seoapi.loc/api/web/v1/pages/1/backlinks?page=1"
+    },
+    "next": {
+      "href": "http://seoapi.loc/api/web/v1/pages/1/backlinks?page=2"
+    },
+    "last": {
+      "href": "http://seoapi.loc/api/web/v1/pages/1/backlinks?page=6"
+    }
+  },
+  "_meta": {
+    "totalCount": 120,
+    "pageCount": 6,
+    "currentPage": 1,
+    "perPage": 20
+  }
+}

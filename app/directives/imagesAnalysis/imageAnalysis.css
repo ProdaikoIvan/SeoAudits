@@ -10,3 +10,22 @@
 .imagesAnalysis-TitleDescription-table table img{
     max-width: 50px;
 }
+.imagesAnalysis-TitleDescription-info{
+    margin-left: 20px;
+    font-weight: 700;
+}
+.imageAnalysis-table .table-header{
+    background: #37A1E4;
+}
+
+@media screen and (max-width: 800px){
+    .imagesAnalysis-TitleDescription-table{
+        margin-left: 0;
+    }
+}
+.imageAnalysis-link-cell{
+    word-break: break-all;
+}
+.imageAnalysis-size-cell{
+    white-space: nowrap;
+}

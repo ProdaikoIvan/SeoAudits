@@ -8,7 +8,7 @@
                  alt="Warning">
             {{vm.model.warning}}
         </div>
-        <div  ng-if="vm.model.error > 0" class="error-block">
+        <div ng-if="vm.model.error > 0" class="error-block">
             <img src="../../../../SEO-Audit/app/content/img/Error.svg"
                  alt="Error">
             {{vm.model.error}}
@@ -34,29 +34,96 @@
                         {{item.name}}
                     </h4>
                     <!--<div class="component-TitleDescription">test</div>-->
-                    <div class="component-TitleLinks" ng-if="item.content">
-                        <button class="btn btn-success" type="button">
-                            <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
-                            Get the backlinks
-                        </button>
-                    </div>
                 </div>
+
                 <div class="component-content">
                     <div class="component-information">
                         <div class="component-text" ng-bind-html="item.rationale"></div>
-                        <div class="component-description">test</div>
                     </div>
                     <div class="component-details-block">
                         <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                data-target="#{{'major' + item.id}}" aria-expanded="false" aria-controls="{{'major' + item.id}}">
+                                data-target="#{{'major' + item.id}}" aria-expanded="false"
+                                aria-controls="{{'major' + item.id}}">
                             Details
                         </button>
+                    </div>
+                </div>
+            </div>
+            <div class="component-TitleLinks" ng-if="item.content && item.id !== 78">
+                <div class="popularitySocial-container">
+                    <div class="popularitySocial-facebook">
+                                <span class="social-logo">
+                                    <img src=../../../../SEO-Audit/app/content/img/icn-fb.svg alt="facebook">
+                                </span>
+                        <h4>{{item.content[0].facebook}}</h4>
+                        <p>Reposts</p>
+                    </div>
+                    <div class="popularitySocial-twitter">
+                                <span class="social-logo">
+                                    <img src=../../../../SEO-Audit/app/content/img/twitter-logo-silhouette.svg
+                                         alt="twitter">
+                                </span>
+                        <h4>{{item.content[1].twitter}}</h4>
+                        <p>Reposts</p>
+                    </div>
+                    <div class="popularitySocial-instagram">
+                                <span class="social-logo">
+                                    <img src=../../../../SEO-Audit/app/content/img/instagram-logo.svg alt="instagram">
+                                </span>
+                        <h4>{{item.content[2].instagram}}</h4>
+                        <p>Reposts</p>
+                    </div>
+                    <div class="popularitySocial-googlePlus">
+                                <span class="social-logo">
+                                    <img src=../../../../SEO-Audit/app/content/img/google-plus-symbol.svg
+                                         alt="google-plus">
+                                </span>
+                        <h4>{{item.content[3].google_plus}}</h4>
+                        <p>Reposts</p>
+                    </div>
+                    <div class="popularitySocial-pinterest">
+                                <span class="social-logo">
+                                    <img src=../../../../SEO-Audit/app/content/img/pinterest-logo.svg alt="pinterest">
+                                </span>
+                        <h4>{{item.content[4].pinterest}}</h4>
+                        <p>Reposts</p>
                     </div>
                 </div>
             </div>
             <div class="collapse" id="{{'major' + item.id}}">
                 <div class="well">
                     {{item.description}}
+                </div>
+                <div class="container-social-media-buttons"  ng-if="item.content && item.id === 78">
+                    <div class="facebook-buttons">
+                        <span class="social-logo">
+                             <img src=../../../../SEO-Audit/app/content/img/twitter-logo-silhouette.svg alt="twitter">
+                        </span>
+                        {{item.content[0].facebook}}
+                    </div>
+                    <div class="twitter-buttons">
+                        <span class="social-logo">
+                             <img src=../../../../SEO-Audit/app/content/img/twitter-logo-silhouette.svg alt="twitter">
+                        </span>
+                        {{item.content[1].twitter}}
+                    </div>
+                    <div class="instagram-buttons">
+                        <span class="social-logo">
+                             <img src=../../../../SEO-Audit/app/content/img/instagram-logo.svg alt="instagram">
+                        </span>
+                        {{item.content[2].instagram}}</div>
+                    <div class="googlePlus-buttons">
+                        <span class="social-logo">
+                             <img src=../../../../SEO-Audit/app/content/img/google-plus-symbol.svg alt="google-plus">
+                        </span>
+                        {{item.content[3].google_plus}}
+                    </div>
+                    <div class="pinterest_buttons">
+                        <span class="social-logo">
+                             <img src=../../../../SEO-Audit/app/content/img/pinterest-logo.svg alt="pinterest">
+                        </span>
+                        {{item.content[4].pinterest}}
+                    </div>
                 </div>
             </div>
         </li>

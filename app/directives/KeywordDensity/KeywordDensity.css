@@ -1,0 +1,37 @@
+.topLink > ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.topLink  .topLink-element{
+    flex-grow: 1;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.topLink .list-group{
+    margin-bottom: 0;
+}
+.topLink  .topLink-element > span{
+    display: block;
+}
+.topLink  .topLink-element > span:last-child{
+    text-align: right;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.keywordsDensity-item{
+    margin-bottom: 10px;
+}
+.keywordsDensity-table-container .headTable{
+    background: #37A1E4;
+}
+.keywordsDensity-buttons-container{
+    display: flex;
+    justify-content: space-between;
+ }
+/*#37A1E4*/
+@media screen and (max-width: 800px) {
+    .topLink  .topLink-element{
+        margin-bottom: 5px;
+    }
+}

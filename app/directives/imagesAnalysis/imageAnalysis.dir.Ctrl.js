@@ -35,7 +35,7 @@
                     }
                     if(vm.model.criterias[3].content.length > 5){
                         vm.KeywordAtributes = vm.model.criterias[3].content.slice();
-                        vm.model.criterias[0].content.length = 5;
+                        vm.model.criterias[3].content.length = 5;
                     }
                 }
                 vm.flag = false;

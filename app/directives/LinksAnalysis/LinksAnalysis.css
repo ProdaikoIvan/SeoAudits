@@ -1,0 +1,18 @@
+.component-TitleDescription > span:first-child{
+    margin-right: 10px;
+}
+.linkAnalysis-tableContent-link{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.linkAnalysis-tableContent-size{
+    white-space: nowrap;
+}
+.linkAnalysis-table .table-header{
+    background: #37A1E4;
+}
+@media screen and (max-width: 800px){
+    .linkAnalysis-TitleDescription{
+        margin-left: 0;
+    }
+}

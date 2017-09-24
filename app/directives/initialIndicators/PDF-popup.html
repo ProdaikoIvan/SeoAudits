@@ -1,0 +1,56 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Export PDF (demo)</h4>
+        </div>
+        <div class="modal-body">
+            <div class="check-block">
+                <div class="well">
+                    <div class="has-success">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="vm.PDFExport.includeCheckPassed">Include items with check passed
+                            </label>
+                        </div>
+                    </div>
+                    <div class="has-warning">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="vm.PDFExport.includeWarning">Include items with warning
+                            </label>
+                        </div>
+                    </div>
+                    <div class="has-error">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="vm.PDFExport.includeErrors">Include items with errors
+                            </label>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="vm.PDFExport.displayDetails">Display detailed description of sections in the report
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="vm.PDFExport.addTask">Add the list of to-do tasks
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="vm.PDFExport.printVersion">Print version
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cances</button>
+            <button type="button" class="btn btn-primary" ng-click="vm.exportPDF()">Export</button>
+        </div>
+    </div>
+</div>

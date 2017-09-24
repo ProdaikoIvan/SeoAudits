@@ -7,12 +7,14 @@
 
         url.$inject = [];
     function url() {
-        var server = "http://192.168.0.167/";
+        var server = "https://seoapi.000webhostapp.com/api/web/v1/pages/1";
         return {
             login: server + 'login_custom',
             start: server + 'api/web/v1/pages',
-            audit: [],
-            test: 'services/request/request.json',
+            test: server,
+            audit: [
+
+            ],
             test1: [
                 'services/request/requests/post_pages.json',
                 'services/request/requests/post_pages_1_audits_mdc.json',

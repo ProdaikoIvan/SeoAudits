@@ -8,7 +8,7 @@
                  alt="Warning">
             {{vm.model.warning}}
         </div>
-        <div  ng-if="vm.model.error > 0" class="error-block">
+        <div ng-if="vm.model.error > 0" class="error-block">
             <img src="../../../../SEO-Audit/app/content/img/Error.svg"
                  alt="Error">
             {{vm.model.error}}
@@ -31,14 +31,16 @@
                         <img ng-if="item.checked == 'error'"
                              src="../../../../SEO-Audit/app/content/img/Error.svg"
                              alt="Check">
-                        {{item.name}}
+                        <div ng-if="vm.isString(item.name)">{{item.name}}</div>
+                        <div  ng-if="!vm.isString(item.name)">{{item.name[0]}}</div>
                     </h4>
+                    <div class="component-title-info"  ng-if="!vm.isString(item.name)">{{item.name[1]}}</div>
                     <div class="component-TitleDescription" ng-if="!vm.isString(item.rationale)">
                         <span>DoFollow: {{item.rationale.DoFollow}}</span>
                         <span>NoFollow: {{item.rationale.NoFollow}}</span>
                     </div>
-                    <div class="component-TitleLinks" ng-if="item.content && item.id != 38">
-                        <button class="btn btn-success" type="button">
+                    <div class="component-TitleLinks" ng-if="item.content && $index !== 2 && $index !== 3">
+                        <button class="btn btn-success" type="button" ng-click="vm.openLinks(item.content)">
                             <span class="glyphicon glyphicon-random" aria-hidden="true"></span>
                             Get the backlinks
                         </button>
@@ -46,12 +48,15 @@
                 </div>
                 <div class="component-content">
                     <div class="component-information">
-                        <div class="component-text" ng-bind-html="item.rationale" ng-if="vm.isString(item.rationale)"></div>
-                        <div class="component-text" ng-bind-html="item.rationale.title" ng-if="!vm.isString(item.rationale)"></div>
+                        <div class="component-text" ng-bind-html="item.rationale"
+                             ng-if="vm.isString(item.rationale)"></div>
+                        <div class="component-text" ng-bind-html="item.rationale.title"
+                             ng-if="!vm.isString(item.rationale)"></div>
                     </div>
                     <div class="component-details-block">
                         <button class="btn btn-primary" type="button" data-toggle="collapse"
-                                data-target="#{{'linksAnalysis' + item.id}}" aria-expanded="false" aria-controls="{{'linksAnalysis' + item.id}}">
+                                data-target="#{{'linksAnalysis' + item.id}}" aria-expanded="false"
+                                aria-controls="{{'linksAnalysis' + item.id}}">
                             Details
                         </button>
                     </div>
@@ -62,23 +67,46 @@
                     {{item.description}}
                 </div>
             </div>
-            <div class="component-TitleDescription " ng-if="item.id == 38">
-                <table  class="table table-condensed">
-                    <tr>
+            <div class="component-TitleDescription linkAnalysis-TitleDescription" ng-if="$index == 3">
+                <table class="table table-condensed linkAnalysis-table">
+                    <tr class="table-header">
                         <th>Url</th>
                         <th>Response status code</th>
                         <th>Status</th>
                         <th>MOZ PA</th>
                     </tr>
                     <tr ng-repeat="content in item.content" style="height: 50px" class="imagesAnalysis-tableContent">
-                        <td><a href="{{content.link}}" target="_blank">{{content.link}}</a></td>
+                        <td class="linkAnalysis-tableContent-link"><a href="{{content.link}}" target="_blank">{{content.link}}</a></td>
                         <td>{{content.code}}</td>
                         <td>{{content.status}}</td>
-                        <td>{{content.moz_pa}} kB</td>
+                        <td  class="linkAnalysis-tableContent-size">{{content.moz_pa}} kB</td>
                     </tr>
                 </table>
                 <button class="btn btn-default" ng-click="vm.showAllLinks()">{{vm.titleButtonShowLinks}}</button>
             </div>
         </li>
     </ul>
+</div>
+
+<div class="modal fade" id="linksAnalysis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Links</h4>
+            </div>
+            <div class="modal-body">
+                <div class="linksContent" ng-repeat="link in vm.linksContent">{{link}}</div>
+                <div class="well well-sm">
+                  It is recommended to load only the unique domain backlinks to avoid
+                        excessive data from the websites where links are sitewide or places on multiple pages. Only the
+                        first 50000 backlinks will be loaded
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
