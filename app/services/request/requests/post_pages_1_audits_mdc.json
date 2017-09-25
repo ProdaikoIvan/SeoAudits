@@ -48,7 +48,7 @@
       ],
       "rationale": "<i class=\"passed\">34</i>",
       "description": "The number of backlinks from unique domains is a significant criterion of how popular and competitive your website is. 100 links from 100 domains is considerably better than 1000 links from one domain.",
-      "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks",
+      "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks/unique",
       "checked": "passed"
     }
   ],

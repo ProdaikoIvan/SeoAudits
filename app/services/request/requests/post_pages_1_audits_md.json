@@ -1,19 +1,22 @@
 {
-  "id": 5,
+  "id": 3,
   "name": "Meta Description",
   "description": "Wir beraten und unterstützen kleine und mittelständische Unternehmen im Bereich Internet- und E-Commerce, um einen modernen Internet-Auftritt zu realisieren",
   "criterias": [
     {
-      "id": 18,
+      "id": 9,
       "type": 9,
       "name": "Meta Description length",
-      "rationale": "<i class=\"warning\">1054</i> pixels",
+      "rationale": [
+        "<i class=\"warning\">1054</i> pixels",
+        "<i class=\"warning\">158</i> chars"
+      ],
       "description": "Meta <description> tag may be used by the search engines to create a snippet of your webpage. Its length may be unlimited, but search engines limit the snippet size to 160 characters and so the recommended size for the tag is 50 - 160 characters.",
       "content": null,
       "checked": "warning"
     },
     {
-      "id": 19,
+      "id": 10,
       "type": 10,
       "name": "Add keyword in the Meta Description tag",
       "rationale": null,
@@ -22,7 +25,7 @@
       "checked": "error"
     },
     {
-      "id": 20,
+      "id": 11,
       "type": 11,
       "name": "Avoid duplicate Meta Description tags",
       "rationale": null,

@@ -1,28 +1,28 @@
 {
-  "id": 9,
+  "id": 7,
   "name": "Content analysis",
   "description": null,
   "criterias": [
     {
-      "id": 32,
+      "id": 23,
       "type": 23,
       "name": "Content size",
-      "rationale": "<i class=\"passed\">430</i> words",
+      "rationale": "<i class=\"passed\">416</i> words",
       "description": "Search engines use a complicated algorithm to calculate content to html ration but in practice that means you need to add at least 250 words of unique content. That secures your page gets indexed faster and multiple keywords are used across the content",
       "content": null,
       "checked": "passed"
     },
     {
-      "id": 33,
+      "id": 24,
       "type": 24,
       "name": "Uniqueness rate",
       "rationale": "<i class=\"passed\">100 % </i>",
       "description": "Quality and unique content may influence your rankings considerably better than many other factors. Adding new articles or updating the existing content is what makes your visitors come back and new Internet surfers land on your website. Good content is getting spread over social networks, messenger links, e-mails and forums. Organic recommendations of some content to other users is a positive signal towards search engines as well. You may hardly reach the effect without decent content.",
-      "content": "Home Leistungen ber uns Referenzen Neuigkeiten Anfrage Ihr Full Service DienstleisterWebl sungen OnlineshopsMehr Information Home Y S ss 2017 08 10T09 18 16 00 00 WER WIR SINDWir beraten und unterst tzen kleine und mittelst ndische Unternehmen und Startups aller Art im Bereich Internet und E Commerce um einen modernen und repr sentativen Internet Auftritt zu realisieren und zu pflegen BER UNS WAS WIR MACHENWir bieten individuelle E Commerce und Webl sungen ideale Marketing Ma nahmen und eine nachhaltige Suchmaschinenoptimierung alles aus einer Hand Profitieren Sie von einer professionellen und z gigen Umsetzung LEISTUNGEN WIE WIR ARBEITENEinzelne Projekte werden schnell und zuverl ssig umgesetzt und pers nlich betreut Dabei werden unsere L sungen individuell und nach Ihren Vorstellungen erstellt trotz hoher Qualit t zu fairen Preisen UMSETZUNG Unsere Kunden Von der Idee bis zur Umsetzung IdeeUnsere Arbeit besteht aus der Kreation und Recherche des Projektes um sowohl Zielgruppe als auch Ihre Anforderungen zu verstehen Auch das finale Produkt wird in diesem Schritt mit in die berlegungen einbezogen MessungDie Auswertungen Ihres bestehenden Internet Auftritts geh ren zu unserer Arbeit alternativ werten wir die von uns neu erstellten Inhalte aus um Ihre Webl sungen stetig zu optimieren und zu verbessern DesignWir tasten uns St ck f r St ck an Ihre Vorstellungen heran Das finale Design wird in enger Absprache mit Ihnen erstellt und anschlie end auf Ihre L sung angepasst selbstverst ndlich responsive UmsetzungDieser Schritt widmet sich der realen Umsetzung der besprochenen und finalen Webl sung Diese individuelle L sung ist direkt nutzbar und wird auch zuk nftig nach wie vor mit Ihnen abgestimmt professionell und transparent 12 JAHREMehr als zw lf Jahre sind wir im Online Sektor t tig und weisen eine beachtliche Erfahrung auf Profitieren Sie von unseren Kenntnissen aus mehr als zw lf Jahren PRAXISUnsere Erfahrung umfasst sowohl die Kunden als auch H ndler Seite Wir wissen wie Bestellungen ablaufen sollten von beiden Seiten Wissen von unsch tzbarem Wert SKALIERBARKEITOb Start Up oder etabliertes Unternehmen unser Angebot passt sich Ihren Anforderungen an und w chst mit unseren Kunden Informieren Sie sich unverbindlich TIME TO MARKETUnser etabliertes Team sorgt schnell und zuverl ssig daf r dass unsere individuellen L sungen z gig online zu finden sind responsive und optimiert berzeugen Sie sich selbst K nnen wir weiterhelfen Anfrage NeuigkeitenNew Book Release Germany The Handbook for Foreign Companies and Founders 03 09 2017 Neuer Internetauftritt f r Notar K rtner 16 08 2017 DS Entertainment bekommt ein eigenes Ticket System 08 08 2017 Neue Adresse f r die Intent GmbH 26 07 2017 JobsAkquisition Akquise m w Texter und Content Manager m w Online Redakteur Praktikum m w Web Development Werkstudent m w 2017 Intent GmbH Impressum AGB Datenschutzerkl rung",
+      "content": "Ihr Full Service DienstleisterWebl sungen OnlineshopsMehr Information  Y S ss 2017 08 10T09 18 16 00 00 WER WIR SINDWir aten und unterst tzen kleine und mittelst ndische Unternehmen und Startups aller Art im eich Internet und E Commerce um einen modernen und repr sentativen Internet Auftritt zu realisieren und zu pflegen   WAS WIR MACHENWir bieten individuelle E Commerce und Webl sungen ideale Marketing Ma nahmen und eine nachhaltige Suchmaschinenoptimierung alles aus einer Hand Profitieren Sie von einer professionellen und z gigen Umsetzung  WIE WIR ARBEITENEinzelne Projekte werden schnell und zuverl ssig umgesetzt und pers nlich betreut Dabei werden ere L sungen individuell und nach Ihren Vorstellungen erstellt trotz hoher Qualit t zu fairen Preisen UMSETZUNG ere Kunden Von der Idee bis zur Umsetzung Ideeere Arbeit besteht aus der Kreation und Recherche des Projektes um sowohl Zielgruppe als auch Ihre Anforderungen zu verstehen Auch das finale Produkt wird in diesem Schritt mit in die legungen einbezogen MessungDie Auswertungen Ihres bestehenden Internet Auftritts geh ren zu erer Arbeit alternativ werten wir die von  neu erstellten Inhalte aus um Ihre Webl sungen stetig zu optimieren und zu verbessern DesignWir tasten  St ck f r St ck an Ihre Vorstellungen heran Das finale Design wird in enger Absprache mit Ihnen erstellt und anschlie end auf Ihre L sung angepasst selbstverst ndlich responsive UmsetzungDieser Schritt widmet sich der realen Umsetzung der besprochenen und finalen Webl sung Diese individuelle L sung ist direkt nutzbar und wird auch zuk nftig nach wie vor mit Ihnen abgestimmt professionell und transparent 12 JAHREMehr als zw lf Jahre sind wir im Online Sektor t tig und weisen eine beachtliche Erfahrung auf Profitieren Sie von eren Kenntnissen aus mehr als zw lf Jahren PRAXISere Erfahrung umfasst sowohl die Kunden als auch H ndler Seite Wir wissen wie Bestellungen ablaufen sollten von beiden Seiten Wissen von ch tzbarem Wert SKALIERBARKEITOb Start Up oder etabliertes Unternehmen er Angebot passt sich Ihren Anforderungen an und w chst mit eren Kunden Informieren Sie sich unverbindlich TIME TO MARKETer etabliertes Team sorgt schnell und zuverl ssig daf r dass ere individuellen L sungen z gig online zu finden sind responsive und optimiert zeugen Sie sich selbst K nnen wir weiterhelfen  New Book Release Germany The Handbook for Foreign Companies and Founders 03 09 2017 Neuer Internetauftritt f r Notar K rtner 16 08 2017 DS Entertainment bekommt ein eigenes Ticket System 08 08 2017 Neue Adresse f r die Intent GmbH 26 07 2017 JobsAkquisition Akquise m w Texter und Content Manager m w Online Redakteur Praktikum m w Web Development Werkstudent m w 2017 Intent GmbH Impressum AGB Datenschutzerkl rung",
       "checked": "passed"
     },
     {
-      "id": 34,
+      "id": 25,
       "type": 25,
       "name": "The keyword is used in the content",
       "rationale": null,
@@ -31,7 +31,7 @@
       "checked": "passed"
     },
     {
-      "id": 35,
+      "id": 26,
       "type": 26,
       "name": "Use the keyword at the beginning of the content",
       "rationale": null,
@@ -40,10 +40,10 @@
       "checked": "error"
     },
     {
-      "id": 36,
+      "id": 27,
       "type": 27,
       "name": "Keyword density",
-      "rationale": "<i class=\"warning\">0.23 % </i>",
+      "rationale": "<i class=\"warning\">0.24 % </i>",
       "description": "Keyword density is the keywords to content words ratio expressed in percentage equivalent. The pages with the optimized keyword density rank better by the search engines. Algorithms of search engines keep changing and so the keyword density value varies as well. In order to assess the best keyword density you may analyze your top ranking competitors.",
       "content": null,
       "checked": "warning"

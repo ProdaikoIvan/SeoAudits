@@ -28,9 +28,10 @@
                 return vm.model;
             }, function (newVal) {
                 if(newVal === undefined)return;
-                if(vm.flag && vm.model.criterias[4].rationale.length > 5){
-                    vm.downloadedFiles = vm.model.criterias[4].rationale.slice();
-                    vm.model.criterias[4].rationale.length = 5;
+                console.log(vm.model.criterias[4]);
+                if(vm.flag && vm.model.criterias[4].content.length > 5){
+                    vm.downloadedFiles = vm.model.criterias[4].content.slice();
+                    vm.model.criterias[4].content.length = 5;
                 }
                 vm.flag = false;
             });
@@ -66,13 +67,13 @@
 
 
             function showAllDownloadedFiles() {
-                if(vm.model.criterias[4].rationale === vm.downloadedFiles){
-                    vm.downloadedFiles = vm.model.criterias[4].rationale.slice();
-                    vm.model.criterias[4].rationale.length = 5;
+                if(vm.model.criterias[4].content === vm.downloadedFiles){
+                    vm.downloadedFiles = vm.model.criterias[4].content.slice();
+                    vm.model.criterias[4].content.length = 5;
                     vm.titleButtonShowDownloadedFiles = "Show All";
                 }
                 else{
-                    vm.model.criterias[4].rationale = vm.downloadedFiles;
+                    vm.model.criterias[4].content = vm.downloadedFiles;
                     vm.titleButtonShowDownloadedFiles = "Hide";
                 }
             }

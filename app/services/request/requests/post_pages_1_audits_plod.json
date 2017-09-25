@@ -1,7 +1,7 @@
 {
   "id": 13,
   "name": "Page Load Optimization Desktop",
-  "description": "<img src=\"content/img/pagespeed_desktop.jpg\" alt=\"desktop image (demo)\">",
+  "description": "<img src=\"content/img/pagespeed_desktop.jpg\" alt=\"desktop view\">",
   "criterias": [
     {
       "id": 60,
@@ -14,7 +14,7 @@
         }
       ],
       "content": null,
-      "checked": "error"
+      "checked": "passed"
     },
     {
       "id": 61,
@@ -78,11 +78,11 @@
       "rationale": null,
       "description": [
         {
-          "title": "In our test, your server responded in 0.20 seconds. There are many factors that can slow down your server response time. <a target =\"_blank\" href=\"https://developers.google.com/speed/docs/insights/Server\">Please read our recommendations</a> to learn how you can monitor and measure where your server is spending the most time."
+          "title": "In our test, your server responded in 0.21 seconds. There are many factors that can slow down your server response time. <a target =\"_blank\" href=\"https://developers.google.com/speed/docs/insights/Server\">Please read our recommendations</a> to learn how you can monitor and measure where your server is spending the most time."
         }
       ],
       "content": null,
-      "checked": "error"
+      "checked": "passed"
     },
     {
       "id": 64,
@@ -101,7 +101,7 @@
         }
       ],
       "content": null,
-      "checked": "error"
+      "checked": "passed"
     },
     {
       "id": 65,
@@ -136,7 +136,7 @@
         }
       ],
       "content": null,
-      "checked": "error"
+      "checked": "passed"
     },
     {
       "id": 67,
@@ -192,7 +192,7 @@
         }
       ],
       "content": null,
-      "checked": "error"
+      "checked": "passed"
     },
     {
       "id": 70,
@@ -249,7 +249,7 @@
       "checked": "passed"
     }
   ],
-  "percent": 38,
+  "percent": 69,
   "warning": 3,
-  "error": 7
+  "error": 2
 }

@@ -1,10 +1,10 @@
 {
-  "id": 6,
+  "id": 4,
   "name": "Page's URL Structure",
   "description": null,
   "criterias": [
     {
-      "id": 21,
+      "id": 12,
       "type": 12,
       "name": "URL length",
       "rationale": "<i class=\"passed\">16</i> chars",
@@ -13,7 +13,7 @@
       "checked": "passed"
     },
     {
-      "id": 22,
+      "id": 13,
       "type": 13,
       "name": "Keyword is used in the URL",
       "rationale": null,
@@ -22,7 +22,7 @@
       "checked": "passed"
     },
     {
-      "id": 23,
+      "id": 14,
       "type": 14,
       "name": "Use a hyphen to separate words in the URL",
       "rationale": null,
@@ -31,7 +31,7 @@
       "checked": "passed"
     },
     {
-      "id": 24,
+      "id": 15,
       "type": 15,
       "name": "Do not use capital letters in the URL",
       "rationale": null,
@@ -40,7 +40,7 @@
       "checked": "passed"
     },
     {
-      "id": 25,
+      "id": 16,
       "type": 16,
       "name": "Page duplicates not found",
       "rationale": null,

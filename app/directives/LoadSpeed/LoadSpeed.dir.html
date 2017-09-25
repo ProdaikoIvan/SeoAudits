@@ -60,7 +60,7 @@
                         <th>Path</th>
                         <th>Size</th>
                     </tr>
-                    <tr ng-repeat="content in item.rationale" style="height: 50px" class="imagesAnalysis-tableContent">
+                    <tr ng-repeat="content in item.content" style="height: 50px" class="imagesAnalysis-tableContent">
                         <td ng-bind-html="vm.logoFile(content.file)"></td>
                         <td class="loadAnalysis-tableContent-path">{{content.file}}</td>
                         <td class="loadAnalysis-tableContent-link"><a href="{{vm.linkDownloadedFiles(content.path)}}" target="_blank">{{content.path}}</a></td>

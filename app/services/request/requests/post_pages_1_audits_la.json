@@ -1,10 +1,10 @@
 {
-  "id": 2,
+  "id": 10,
   "name": "Links analysis",
   "description": null,
   "criterias": [
     {
-      "id": 5,
+      "id": 35,
       "type": 3,
       "name": [
         "Backlinks",
@@ -16,7 +16,7 @@
       "checked": "passed"
     },
     {
-      "id": 6,
+      "id": 36,
       "type": 4,
       "name": [
         "Backlinks",
@@ -24,11 +24,11 @@
       ],
       "rationale": "<i class=\"passed\">34</i>",
       "description": "The number of backlinks from unique domains \n    is a significant criterion of how popular and competitive your website is. \n    100 links from 100 domains is considerably better than 1000 links from one domain.",
-      "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks",
+      "content": "http://seoapi.loc/api/web/v1/pages/1/backlinks/unique",
       "checked": "passed"
     },
     {
-      "id": 7,
+      "id": 37,
       "type": 35,
       "name": "Outbound links",
       "rationale": {
@@ -41,7 +41,7 @@
       "checked": "passed"
     },
     {
-      "id": 8,
+      "id": 38,
       "type": 36,
       "name": "Internal links",
       "rationale": {
