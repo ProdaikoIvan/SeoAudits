@@ -7,39 +7,39 @@
 
         url.$inject = [];
     function url() {
-        var server = "https://seoapi.000webhostapp.com/api/web/v1/pages/1";
+        // var server = "https://seoapi.000webhostapp.com/api/web/v1/";
+        //var server = "http://192.168.0.105/api/web/v1/";
+        var server = "http://demo-artikel.de/api/web/v1/";
         return {
-            login: server + 'login_custom',
-            start: server + 'api/web/v1/pages',
-            test: server,
-            audit: [
+            login: server + 'users/login',
+            signUp: server + 'users/signup',
+            getPage: server + 'pages',
+            getAudits: [
+                server + 'pages/1/audits/mdc',
+                server + 'pages/1/audits/pt',
+                server + 'pages/1/audits/md',
+                server + 'pages/1/audits/pus',
+                server + 'pages/1/audits/iscsse',
+                server + 'pages/1/audits/ia',
+                server + 'pages/1/audits/ca',
+                server + 'pages/1/audits/ht',
+                server + 'pages/1/audits/kd',
+                server + 'pages/1/audits/la',
+                server + 'pages/1/audits/ls',
+                server + 'pages/1/audits/plom',
+                server + 'pages/1/audits/plod',
+                server + 'pages/1/audits/psm',
+                server + 'pages/1/audits/uta'
+            ],
 
-            ],
-            test1: [
-                'services/request/requests/post_pages.json',
-                'services/request/requests/post_pages_1_audits_mdc.json',
-                'services/request/requests/post_pages_1_audits_pt.json',
-                'services/request/requests/post_pages_1_audits_md.json',
-                'services/request/requests/post_pages_1_audits_pus.json',
-                'services/request/requests/post_pages_1_audits_iscsse.json',
-                'services/request/requests/post_pages_1_audits_ia.json',
-                'services/request/requests/post_pages_1_audits_ca.json',
-                'services/request/requests/post_pages_1_audits_ht.json',
-                'services/request/requests/post_pages_1_audits_kd.json',
-                'services/request/requests/post_pages_1_audits_la.json',
-                'services/request/requests/post_pages_1_audits_ls.json',
-                'services/request/requests/post_pages_1_audits_plom.json',
-                'services/request/requests/post_pages_1_audits_plod.json',
-                'services/request/requests/post_pages_1_audits_psm.json',
-                'services/request/requests/post_pages_1_audits_uta.json'
-            ],
 
             setUrlId: function (id) {
                 var auditsType = ["mdc","pt","md","pus","iscsse","ia","ca","ht","kd","la","ls","plom","plod","psm","uta"];
+                this.getAudits.length = 0;
+                this.getPage = server + 'pages'+ id;
                 auditsType.forEach(function (item) {
-                    this.audit.push(server + "api/web/v1/pages/"+ id + /audits/ + item)
+                    this.getAudits.push(server + "pages/"+ id + /audits/ + item)
                 }, this);
-                console.log(this.audit)
             }
         };
     }

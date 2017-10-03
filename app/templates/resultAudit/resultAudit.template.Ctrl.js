@@ -5,14 +5,17 @@
         .module('app')
         .controller('resultAuditCtrl', resultAuditCtrl);
 
-    resultAuditCtrl.$inject = ['requestData', 'auditData', 'dataLoaded', 'categoriesAudit'];
+    resultAuditCtrl.$inject = ['auditData', 'dataLoaded', 'categoriesAudit', '$scope', '$state'];
 
-    function resultAuditCtrl(requestData, auditData, dataLoaded, categoriesAudit) {
+    function resultAuditCtrl(auditData, dataLoaded, categoriesAudit, $scope, $state) {
         var vm = this;
-        auditData.data = requestData.data;
-        vm.data = auditData.data;
+        if (auditData.data.url === "" || auditData.data.keyword === "") {
+            $state.go('create');
+            return;
+        }
 
-        console.log(this);
+        vm.data = auditData.data;
+        console.log(vm);
         vm.selectedItem = 1;
         vm.categories = categoriesAudit.categories;
 
@@ -31,7 +34,16 @@
                 }
             ]
         };
+        $scope.$watch(function () {
+            return auditData.data;
+        }, function (newVal) {
+            console.log(newVal.audits.length);
+            vm.data = auditData.data;
+        }, true);
+
 
         dataLoaded.autoLoad();
+
+
     }
 })();

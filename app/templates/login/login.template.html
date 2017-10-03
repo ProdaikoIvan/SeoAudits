@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="login-container  col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+        <!-- Nav tabs -->
+        <ul id="loginTabs" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#login" aria-controls="home" role="tab" data-toggle="tab">Login</a>
+            </li>
+            <li role="presentation"><a href="#registration" aria-controls="profile" role="tab" data-toggle="tab">Registration</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content context-login-registration">
+            <!--Login-->
+            <div role="tabpanel" class="tab-pane active" id="login">
+                <div ng-if="vm.loginIsError" class="alert alert-danger" role="alert">{{vm.loginErrorMessage}}</div>
+                <h2>Login</h2>
+                <form name="loginForm" class="form-horizontal" ng-submit="vm.signIn()">
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : loginForm.name.$invalid && !loginForm.name.$pristine }">
+                        <label for="login-email" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input name="name"
+                                   ng-minlength="6"
+                                   required
+                                   type="text" class="form-control" id="login-email" placeholder="Name"
+                                   ng-model="vm.login.username">
+                        </div>
+                    </div>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+                        <label for="login-pass" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input name="password" type="password" class="form-control" id="login-pass"
+                                   placeholder="Password"
+                                   ng-minlength="6"
+                                   required
+                                   ng-model="vm.login.password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Sign in
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--Registration-->
+            <div role="tabpanel" class="tab-pane" id="registration">
+                <h2>Registration</h2>
+                <form name="registrationForm" class="form-horizontal" ng-submit="vm.signUp()">
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : registrationForm.name.$invalid && !registrationForm.name.$pristine }">
+                        <label for="registration-email" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input ng-minlength="6" type="text" name="name" class="form-control"
+                                   id="registration-email" placeholder="Name" ng-model="vm.registration.username"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="form-group"
+                         ng-class="{ 'has-error' : registrationForm.password.$invalid && !registrationForm.password.$pristine }">
+                        <label for="registration-pass" class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <input name="password" ng-minlength="6" type="password" class="form-control"
+                                   id="registration-pass" placeholder="Password" ng-model="vm.registration.password"
+                                   required>
+                        </div>
+                    </div>
+                    <!--<div class="form-group">-->
+                    <!--<label for="registration-pass-repeat" class="col-sm-2 control-label">Password Again</label>-->
+                    <!--<div class="col-sm-10">-->
+                    <!--<input type="password" class="form-control" id="registration-pass-repeat" placeholder="Password Again" >-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default" ng-disabled="registrationForm.$invalid">Sign
+                                up
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

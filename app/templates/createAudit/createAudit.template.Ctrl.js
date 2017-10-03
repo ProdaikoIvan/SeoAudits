@@ -5,10 +5,9 @@
         .module('app')
         .controller('createAuditCtrl', createAuditCtrl);
 
-    createAuditCtrl.$inject = ['requestData'];
-    function createAuditCtrl(requestData) {
+    createAuditCtrl.$inject = [];
+    function createAuditCtrl() {
         var vm = this;
-        vm.data = requestData.data;
         vm.selectedItem = 0;
 
         vm.links = {

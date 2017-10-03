@@ -3,12 +3,23 @@
 
     angular
         .module('app')
-        .service('auditData', auditData);
+        .factory('auditData', auditData);
 
         auditData.$inject = [];
     function auditData() {
         return {
-            data: []
+            data: {
+                audits:[],
+                created_at:"",
+                error:0,
+                id:0,
+                keyword:"",
+                percent :0,
+                success:0,
+                total:0,
+                url:"",
+                warning:0
+            }
         }
     }
 })();
