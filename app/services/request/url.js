@@ -14,6 +14,7 @@
             login: server + 'users/login',
             signUp: server + 'users/signup',
             getPage: server + 'pages',
+            savePDF: server + 'pages/1/report',
             getAudits: [
                 server + 'pages/1/audits/mdc',
                 server + 'pages/1/audits/pt',
@@ -36,7 +37,8 @@
             setUrlId: function (id) {
                 var auditsType = ["mdc","pt","md","pus","iscsse","ia","ca","ht","kd","la","ls","plom","plod","psm","uta"];
                 this.getAudits.length = 0;
-                this.getPage = server + 'pages'+ id;
+                //this.getPage = server + 'pages'+ id;
+                this.savePDF = server + 'pages/' + id + '/report';
                 auditsType.forEach(function (item) {
                     this.getAudits.push(server + "pages/"+ id + /audits/ + item)
                 }, this);

@@ -5,9 +5,9 @@
         .module('app')
         .controller('initialIndicatorsCtrl', initialIndicatorsCtrl);
 
-    initialIndicatorsCtrl.$inject = ['$scope', 'dataLoaded', 'categoriesAudit', '$window'];
+    initialIndicatorsCtrl.$inject = ['$scope', 'dataLoaded', 'categoriesAudit', '$window', 'request', 'url', 'authorization'];
 
-    function initialIndicatorsCtrl($scope, dataLoaded, categoriesAudit, $window) {
+    function initialIndicatorsCtrl($scope, dataLoaded, categoriesAudit, $window, request, url, authorization) {
         this.$onInit = function () {
             var vm = this;
 
@@ -18,9 +18,9 @@
                 'directives/Audits/initialIndicators/EmailSent-Popup.html'
             ];
             vm.PDFExport = {
-                includeCheckPassed: true,
-                includeWarning: true,
-                includeErrors: true,
+                success: true,
+                warning: true,
+                error: true,
                 displayDetails: false,
                 addTask: false,
                 printVersion: false
@@ -67,7 +67,20 @@
             }
 
             function exportPDF() {
-                console.log(vm.PDFExport);
+                var dubl = angular.copy(vm.PDFExport);
+                delete dubl.displayDetails;
+                delete dubl.addTask;
+                delete dubl.printVersion;
+                // dubl.responseType = 'arraybuffer';
+                console.log(dubl);
+                request.request(url.savePDF, 'POST', dubl, authorization.getAuthKey()).then(function (res, status) {
+                    var file = new Blob([res.data], {type: 'application/pdf'});
+                    var fileURL = URL.createObjectURL(file);
+                    window.open(fileURL);
+                    console.log(res.data);
+                    // var data = new Blob([resp.data], { type:  "application/pdf;charset=utf-8"});
+                    // FileSaver.saveAs(data, 'text.pdf');
+                });
                 $('#popup').modal('hide');
             }
 
@@ -103,18 +116,14 @@
             }
 
             $scope.$watch(function () {
-                return vm.model.audits;
+                if (vm.model)
+                    return vm.model.audits;
             }, function (newVal, old) {
                 active();
             }, true);
 
             function active() {
                 vm.data.length = 0;
-
-                // vm.data.push(vm.model.success);
-                // vm.data.push(vm.model.warning);
-                // vm.data.push(vm.model.error);
-
 
                 if (vm.model.audits.length > 14) {
                     vm.labelsCategoriesMobile.length = 0;
@@ -127,7 +136,6 @@
                         vm.labelsCategoriesMobile.push(i + 1);
                         vm.dataCategories.push(item.percent);
                         vm.reloadDisabled = false;
-
                     });
 
                     vm.data.push(vm.model.success);

@@ -12,9 +12,7 @@
             request: request
         };
 
-        //'Authorization': 'Bearer ' + 'nMrI_6O8KbCWP-ChIsRhxGWWV8391bfD'
-        ////////////////
-
+        //responseType = 'arraybuffer';
         function request(urlPath, method, data, auth) {
             var defer = $q.defer();
             $http({
@@ -24,7 +22,7 @@
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json; charset=UTF-8',
-                    'Authorization': 'Bearer ' +  auth
+                    'Authorization': 'Bearer ' + auth
                 }
             }).then(function (data) {
                 defer.resolve(data);

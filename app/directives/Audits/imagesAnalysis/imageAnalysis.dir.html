@@ -18,7 +18,7 @@
 <div class="row">
     <div class="alert alert-info" ng-if="vm.model.description" role="alert">{{vm.model.description}}</div>
     <ul class="list-group">
-        <li class="list-group-item" ng-repeat="item in vm.model.criterias">
+        <li class="list-group-item" ng-repeat="item in vm.model.criterias track by $index">
             <div class="component-item">
                 <div class="component-title-container">
                     <h4 class="component-title">
@@ -35,8 +35,8 @@
                     </h4>
                     <div class="component-TitleDescription imagesAnalysis-TitleDescription-info" ng-bind-html="item.rationale"></div>
                     <div class="component-TitleDescription imagesAnalysis-TitleDescription" ng-if="$index !== 4 && $index !== 3" >
-                        <div ng-bind-html="content.name" ng-repeat="content in item.content"></div>
-                        <div  ng-repeat="content in item.content">
+                        <div ng-bind-html="content.name" ng-repeat="content in item.content track by $index"></div>
+                        <div  ng-repeat="content in item.content  track by $index">
                             <span ng-bind-html="content.name"></span>
                             <span ng-bind-html="content.alt"></span>
                         </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="component-TitleDescription imagesAnalysis-TitleDescription" ng-if="$index !== 4 && $index === 3" >
 
-                        <div ng-repeat="content in item.content">
+                        <div ng-repeat="content in item.content  track by $index">
                             <span ng-bind-html="content.name"></span>
                             <span ng-bind-html="content.alt"  class="imagesAnalysis-TitleDescription-info"></span>
                         </div>
@@ -83,7 +83,7 @@
                         <th>Status</th>
                         <th>Size</th>
                     </tr>
-                    <tr ng-repeat="cont in item.content" style="height: 50px" class="imagesAnalysis-tableContent">
+                    <tr ng-repeat="cont in item.content  track by $index" style="height: 50px" class="imagesAnalysis-tableContent">
                         <td><img src="{{cont.name}}" alt="{{cont.name}}"></td>
                         <td class="imageAnalysis-link-cell">{{cont.name}}</td>
                         <td>{{cont.unique_status}}</td>
